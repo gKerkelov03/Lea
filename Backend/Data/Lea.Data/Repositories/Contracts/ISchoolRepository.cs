@@ -2,7 +2,7 @@
 
 namespace Lea.Data.Repositories.Contracts;
 
-public interface ISchoolRepository : IBaseRepository<School>
+public interface ISchoolRepository : IBaseRepository<Course>
 {
 
 }

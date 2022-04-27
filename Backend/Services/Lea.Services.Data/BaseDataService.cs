@@ -32,7 +32,6 @@ public class BaseDataService<TEntity, TViewModel, TRepository> : IBaseDataServic
         await _repository.CreateAsync(entity);
     }
 
-
     public async virtual Task Update(TViewModel model)
     {
         var entity = await OnBeforeUpdate(model);

@@ -2,7 +2,7 @@
 
 namespace Lea.Data.Repositories.Contracts;
 
-public interface IAnswerOptionRepository : IBaseRepository<Class>
+public interface IAnswerOptionRepository : IBaseRepository<Group>
 {
 
 }

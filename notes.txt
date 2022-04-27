@@ -1,0 +1,31 @@
+when you register initially you do not have any roles
+
+when you have no roles
+    you have a button for creating your own course and you will become a director of that course so a role director for that course will be applied to your account.        
+    you have invitations folder in which your invitations go when someone send you one and you have a button accept and a button delete
+     
+
+when you have a role director 
+    you have a search bar which searches all users in the app (search can be by username, email or name with search by option)
+    you can send invitation requests to people for administrator role
+    you can create groups
+    you can send invitation requests to people for lector role and you select the groups from dropdown menu
+    you can send invitation requests to people for student role and you select the groups from dropdown menu
+    you can see list with people and the roles they have in your school,
+    you can edit their roles, completely delete the person's role and kick him out of the course in a way, send text messages, change the groups background images
+
+
+when you have a role administrator
+    you can do all the things that the director can except for inviting new administrators and editing the roles of the existing ones
+
+
+when you have a role Lector 
+    you can change the profile picture of the group
+    you can invite students again with the help of dropdown menu for groups selection if you want to add him in several groups
+    you can schedule a test (no other role can do that)
+    you have folders with questions that you can combine however you want (folder in folder in folder, other folder, 2 questions)
+    when you create test you select folder and question count to be randomly taken from this folder and you do this until you are satisfied
+
+
+if you have role other than director you will have inbox folder in which you will receive some important messages like if someone change your role in some course or if he completely delete you from it or maybe a new exam has been scheduled if you are a student. You will have a button ok to the right of the message and that is the only way it can be deleted, but make it so the app recognizes which messages are seen and which are not and maybe put something red in front of the new ones.
+

@@ -1,8 +1,6 @@
-﻿using Lea.Data.Common;
+﻿namespace Lea.Data.Entities;
 
-namespace Lea.Data.Entities;
-
-public class Test : LeaEntity
+public class PastTest
 {
     public string Name { get; set; }
 
@@ -10,7 +8,9 @@ public class Test : LeaEntity
 
     public int QuestionsCount { get; set; }
 
-    public virtual Class Class { get; set; }
+    public virtual Group Class { get; set; }
+
+    public virtual Lector Creator { get; set; }
 
     public DateTime StartTime { get; set; }
 

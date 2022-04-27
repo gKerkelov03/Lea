@@ -14,8 +14,4 @@
     <ProjectReference Include="..\..\Common\Lea.Common\Lea.Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

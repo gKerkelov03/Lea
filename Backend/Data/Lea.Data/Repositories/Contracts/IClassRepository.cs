@@ -2,7 +2,7 @@
 
 namespace Lea.Data.Repositories.Contracts;
 
-public interface IClassRepository : IBaseRepository<Class>
+public interface IClassRepository : IBaseRepository<Group>
 {
 
 }

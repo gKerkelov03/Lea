@@ -2,7 +2,7 @@
 
 namespace Lea.Data.Repositories.Contracts;
 
-public interface ITestRepository : IBaseRepository<Test>
+public interface ITestRepository : IBaseRepository<UpcomingTest>
 {
 
 }

@@ -2,11 +2,11 @@
 
 namespace Lea.Data.Seeding.Seeders;
 
-public class UsersSeeder : BaseSeeder<User>
+public class UsersSeeder : BaseSeeder<LeaUser>
 {
     public UsersSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext, serviceProvider)
     {
-        dataToSeed = new User[]
+        dataToSeed = new LeaUser[]
         {
 
         };
