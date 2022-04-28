@@ -1,9 +1,10 @@
 ﻿using System.Reflection;
+using AutoMapper;
 using Lea.Services.AutoMapper.Conventions;
 
 namespace Lea.Services.AutoMapper;
 
-public static class AutoMapperConfig
+public static partial class AutoMapperConfig
 {
     private static bool initialized;
     public static IMapper MapperInstance { get; set; }
@@ -21,10 +22,13 @@ public static class AutoMapperConfig
         var types = assemblies.SelectMany(a => a.GetExportedTypes()).ToList();
         var config = new MapperConfigurationExpression();
 
+        
+
         config.CreateProfile(
             "ReflectionProfile",
             configuration =>
-            {
+            {                
+
                 // IMapFrom<>
                 foreach (var map in GetFromMaps(types))
                 {
@@ -37,7 +41,7 @@ public static class AutoMapperConfig
                     configuration.CreateMap(map.Source, map.Destination);
                 }
 
-                // IHaveCustomMappings
+                //IHaveCustomMappings
                 foreach (var map in GetCustomMappings(types))
                 {
                     map.CreateMappings(configuration);
@@ -47,6 +51,8 @@ public static class AutoMapperConfig
         AutoMapperConfig.MapperInstance = new Mapper(new MapperConfiguration(config));
     }
 
+
+    //TODO: Refactor the methods GetFromMaps, GetToMaps and GetCustomMappings (extract common logic)
     private static IEnumerable<TypesMap> GetFromMaps(IEnumerable<Type> types)
     {
         var fromMaps = from t in types
@@ -91,12 +97,5 @@ public static class AutoMapperConfig
                          select (IHaveCustomMappings)Activator.CreateInstance(t);
 
         return customMaps;
-    }
-
-    private class TypesMap
-    {
-        public Type Source { get; set; }
-
-        public Type Destination { get; set; }
     }
 }

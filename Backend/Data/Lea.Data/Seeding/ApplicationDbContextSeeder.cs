@@ -35,7 +35,7 @@ public class ApplicationDbContextSeeder : ISeeder
             new RolesSeeder(dbContext, serviceProvider),
             new UsersSeeder(dbContext, serviceProvider),
 
-            new AnswerOptionsSeeder(dbContext, serviceProvider),
+            new TestAnswerOptionsSeeder(dbContext, serviceProvider),
             new ClassesSeeder(dbContext, serviceProvider),
             new FoldersSeeder(dbContext, serviceProvider),
             new QuestionsSeeder(dbContext, serviceProvider),

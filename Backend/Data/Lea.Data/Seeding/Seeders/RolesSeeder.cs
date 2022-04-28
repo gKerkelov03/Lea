@@ -1,4 +1,4 @@
-﻿using Lea.Data.Entities;
+﻿using Lea.Data.Entities.Identity;
 
 namespace Lea.Data.Seeding.Seeders;
 

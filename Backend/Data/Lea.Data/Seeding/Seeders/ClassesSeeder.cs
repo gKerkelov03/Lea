@@ -1,12 +1,12 @@
-﻿using Lea.Data.Repositories;
+﻿using Lea.Data.Repositories.Core;
 
 namespace Lea.Data.Seeding.Seeders;
 
-public class ClassesSeeder : BaseSeeder<ClassRepository>
+public class ClassesSeeder : BaseSeeder<GroupsRepository>
 {
     public ClassesSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext, serviceProvider)
     {
-        dataToSeed = new ClassRepository[]
+        dataToSeed = new GroupsRepository[]
         {
 
         };

@@ -3,6 +3,7 @@
 namespace Lea.Web.Controllers;
 
 [ApiController]
-public abstract class ApiController
+public abstract class ApiController : ControllerBase
 {
+    
 }

@@ -21,11 +21,27 @@ when you have a role administrator
 
 when you have a role Lector 
     you can change the profile picture of the group
-    you can invite students again with the help of dropdown menu for groups selection if you want to add him in several groups
+    you can invite students again with the help of dropdown menu for groups selection if you want to add them in several groups
+    you can remove students
     you can schedule a test (no other role can do that)
     you have folders with questions that you can combine however you want (folder in folder in folder, other folder, 2 questions)
     when you create test you select folder and question count to be randomly taken from this folder and you do this until you are satisfied
+    when the test is successfully created, you select the groups to which it will be scheduled you select start time and end time
+    when test is scheduled all online students should receive a message in their inbox folder(like a notification)
+    once a test is scheduled you can edit the start time and the end time and delete the test
+    you can see all your students past exams in the group (what the questions happen to be what the student selected, what is the right answer and how many points does he have)
+    you can add new chats (text chats)
+
+when you have a role student
+    you can do a test
+    you can see your past tests (results, correct answers and selected answers)
+    you can vote to polls
 
 
 if you have role other than director you will have inbox folder in which you will receive some important messages like if someone change your role in some course or if he completely delete you from it or maybe a new exam has been scheduled if you are a student. You will have a button ok to the right of the message and that is the only way it can be deleted, but make it so the app recognizes which messages are seen and which are not and maybe put something red in front of the new ones.
 
+every group will have chats and it will have 3 chats out of the box (#general #random #polls)
+
+every user can send text messages to other users for example an admin can send a message to a student saying "Your profile picture is inappropirate, please change it or you will have to leave" (if the student is online when the message is sent he should receive a notification or popup or something)
+
+as much stuff in the app should be real time 

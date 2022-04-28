@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
@@ -12,6 +12,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Lea.Common\Lea.Common.csproj" />
+    <ProjectReference Include="..\..\Services\Lea.Services.AutoMapper\Lea.Services.AutoMapper.csproj" />
+    <ProjectReference Include="..\..\Services\Lea.Services.Data\Lea.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Services\Lea.Services.Emails\Lea.Services.Emails.csproj" />
+    <ProjectReference Include="..\Lea.Web.BindingModels\Lea.Web.BindingModels.csproj" />
+    <ProjectReference Include="..\Lea.Web.ResponseModels\Lea.Web.ResponseModels.csproj" />
   </ItemGroup>
 
 </Project>

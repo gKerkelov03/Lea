@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Web", "Web\Lea.Web\Lea.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Web.ResponseModels", "Web\Lea.Web.ResponseModels\Lea.Web.ResponseModels.csproj", "{0609C772-0EA7-4BCE-A779-9FD1651D3F10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lea.Web.BindingModels", "Web\Lea.Web.BindingModels\Lea.Web.BindingModels.csproj", "{83211A93-D159-4E11-8CE7-4F407C05C430}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Web.BindingModels", "Web\Lea.Web.BindingModels\Lea.Web.BindingModels.csproj", "{83211A93-D159-4E11-8CE7-4F407C05C430}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{7083F436-AF63-4B8E-8C90-18091C5B5320}"
 EndProject
@@ -21,21 +21,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{32F77C58-7709-4E9A-AAD9-D892FF32631B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lea.Services.Models", "Services\Lea.Services.Models\Lea.Services.Models.csproj", "{A2ED83A9-28C5-42B8-9580-01AB8155BF73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Services.Data.Models", "Services\Lea.Services.Models\Lea.Services.Data.Models.csproj", "{A2ED83A9-28C5-42B8-9580-01AB8155BF73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lea.Services", "Services\Lea.Services\Lea.Services.csproj", "{B6E7D620-8CF4-448F-8F40-9A198A18AF89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Services", "Services\Lea.Services\Lea.Services.csproj", "{B6E7D620-8CF4-448F-8F40-9A198A18AF89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lea.Services.Data", "Services\Lea.Services.Data\Lea.Services.Data.csproj", "{FB4FBC49-652B-4D02-BDD0-BC17A20C43CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Services.Data", "Services\Lea.Services.Data\Lea.Services.Data.csproj", "{FB4FBC49-652B-4D02-BDD0-BC17A20C43CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{32CC51F3-F437-4D4B-A8D4-6F5F1786C530}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{46D9B505-38C6-4DC9-8E72-DACD2C5E9F33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lea.Services.AutoMapper", "Services\Lea.Services.AutoMapper\Lea.Services.AutoMapper.csproj", "{C672889F-FFAB-4611-8F0A-7D3B5218323E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Services.AutoMapper", "Services\Lea.Services.AutoMapper\Lea.Services.AutoMapper.csproj", "{C672889F-FFAB-4611-8F0A-7D3B5218323E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lea.Services.Emails", "Services\Lea.Services.Emails\Lea.Services.Emails.csproj", "{B1123865-A78B-44E2-874F-C1F9C4502224}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Services.Emails", "Services\Lea.Services.Emails\Lea.Services.Emails.csproj", "{B1123865-A78B-44E2-874F-C1F9C4502224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lea.Common", "Common\Lea.Common\Lea.Common.csproj", "{F1A6C9E0-2007-4B46-B0D4-AF589E54E5E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lea.Common", "Common\Lea.Common\Lea.Common.csproj", "{F1A6C9E0-2007-4B46-B0D4-AF589E54E5E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

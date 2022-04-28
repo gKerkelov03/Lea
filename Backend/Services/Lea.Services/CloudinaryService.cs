@@ -10,8 +10,7 @@ public class CloudinaryService : ICloudinaryService
 {
     private readonly Cloudinary cloudinaryUtility;
 
-    public CloudinaryService(Cloudinary cloudinaryUtility)
-        => this.cloudinaryUtility = cloudinaryUtility;
+    public CloudinaryService(Cloudinary cloudinaryUtility) => this.cloudinaryUtility = cloudinaryUtility;
 
 
     public async Task<string> UploadPictureAsync(IFormFile pictureFile, string fileName)

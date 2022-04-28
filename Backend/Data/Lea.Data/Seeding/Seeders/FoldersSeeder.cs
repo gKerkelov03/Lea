@@ -1,12 +1,12 @@
-﻿using Lea.Data.Repositories;
+﻿using Lea.Data.Repositories.Secondary;
 
 namespace Lea.Data.Seeding.Seeders;
 
-public class FoldersSeeder : BaseSeeder<FolderRepository>
+public class FoldersSeeder : BaseSeeder<FoldersRepository>
 {
     public FoldersSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext, serviceProvider)
     {
-        dataToSeed = new FolderRepository[]
+        dataToSeed = new FoldersRepository[]
         {
 
         };
