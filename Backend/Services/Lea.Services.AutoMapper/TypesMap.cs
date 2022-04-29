@@ -1,6 +1,6 @@
 ﻿namespace Lea.Services.AutoMapper;
 
-public static partial class AutoMapperConfig
+public static partial class AutoMapperMannager
 {
     public class TypesMap
     {

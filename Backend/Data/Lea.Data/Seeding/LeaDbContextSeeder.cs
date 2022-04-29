@@ -5,12 +5,12 @@ using Microsoft.Extensions.Logging;
 
 namespace Lea.Data.Seeding;
 
-public class ApplicationDbContextSeeder : ISeeder
+public class LeaDbContextSeeder : ISeeder
 {
     private readonly LeaDbContext dbContext;
     private readonly IServiceProvider serviceProvider;
 
-    public ApplicationDbContextSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider)
+    public LeaDbContextSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider)
     {
         this.dbContext = dbContext;
         this.serviceProvider = serviceProvider;
@@ -28,7 +28,7 @@ public class ApplicationDbContextSeeder : ISeeder
             throw new ArgumentNullException(nameof(serviceProvider));
         }
 
-        var logger = serviceProvider.GetService<ILoggerFactory>().CreateLogger(typeof(ApplicationDbContextSeeder));
+        var logger = serviceProvider.GetService<ILoggerFactory>().CreateLogger(typeof(LeaDbContextSeeder));
 
         var seeders = new ISeeder[]
         {

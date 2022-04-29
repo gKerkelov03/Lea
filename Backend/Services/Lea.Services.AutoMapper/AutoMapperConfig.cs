@@ -4,31 +4,27 @@ using Lea.Services.AutoMapper.Conventions;
 
 namespace Lea.Services.AutoMapper;
 
-public static partial class AutoMapperConfig
+public static partial class AutoMapperMannager
 {
     private static bool initialized;
     public static IMapper MapperInstance { get; set; }
 
-
-    public static void RegisterMappings(params Assembly[] assemblies)
+    public static IMapper RegisterMappings(params Assembly[] assemblies)
     {
         if (initialized)
         {
-            return;
+            return MapperInstance;
         }
 
         initialized = true;
 
         var types = assemblies.SelectMany(a => a.GetExportedTypes()).ToList();
         var config = new MapperConfigurationExpression();
-
         
-
         config.CreateProfile(
             "ReflectionProfile",
             configuration =>
             {                
-
                 // IMapFrom<>
                 foreach (var map in GetFromMaps(types))
                 {
@@ -48,7 +44,9 @@ public static partial class AutoMapperConfig
                 }
             });
 
-        AutoMapperConfig.MapperInstance = new Mapper(new MapperConfiguration(config));
+        MapperInstance = new Mapper(new MapperConfiguration(config));
+
+        return MapperInstance;
     }
 
 

@@ -20,30 +20,26 @@ public class BaseDataService<TEntity, TServiceModel, TRepository> : IBaseDataSer
         this.mapper = mapper;
     }
     
-    public virtual async Task<TEntity> OnBeforeCreate(TServiceModel model) => await Task.FromResult(mapper.Map<TEntity>(model));
+    public virtual async Task<TEntity> OnBeforeCreate(TServiceModel model) 
+        => await Task.FromResult(mapper.Map<TEntity>(model));
 
-    public virtual async Task<TEntity> OnBeforeUpdate(TServiceModel model) => await Task.FromResult(mapper.Map<TEntity>(model));    
+    public virtual async Task<TEntity> OnBeforeUpdate(TServiceModel model) 
+        => await Task.FromResult(mapper.Map<TEntity>(model));    
 
-    public virtual async Task Delete(Guid id) => await _repository.DeleteAsync(id);
+    public virtual async Task Delete(Guid id) 
+        => await _repository.DeleteAsync(id);
     
     public virtual async Task Create(TServiceModel model)
-    {
-        var entity = await OnBeforeCreate(model);
-        await _repository.CreateAsync(entity);
-    }
+        => await _repository.CreateAsync(await OnBeforeCreate(model));
+    
 
     public async virtual Task Update(TServiceModel model)
-    {
-        var entity = await OnBeforeUpdate(model);
-        await _repository.UpdateAsync(entity);
-    }
+        => await _repository.UpdateAsync(await OnBeforeUpdate(model));
+    
 
     public virtual async Task<TServiceModel> GetByIdAsync(Guid id)
-    {
-        var entity = await _repository.GetByIdAsync(id);
-
-        return mapper.Map<TServiceModel>(entity);
-    }
+        => mapper.Map<TServiceModel>(await _repository.GetByIdAsync(id));
+    
 
     public virtual async Task<List<TServiceModel>> GetAllAsync(Expression<Func<TServiceModel, bool>> filter)
     {
