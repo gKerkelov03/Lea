@@ -6,8 +6,9 @@ using Lea.Data.Configurations;
 using Lea.Data.Entities.Identity;
 using Lea.Services.AutoMapper;
 using Lea.Services.Data.Models.Core;
-using Lea.Web.BindingModels;
-using Lea.Web.ResponseModels;
+using Lea.Web.Commands.Identity;
+using Lea.Web.Handlers.Identity;
+using Lea.Web.Responses.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -49,8 +50,8 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddAutoMapper(this IServiceCollection services)
         => services.AddSingleton(
             AutoMapperMannager.RegisterMappings(
-                typeof(LoginResponseModel).Assembly,
-                typeof(LoginBindingModel).Assembly,
+                typeof(LoginResponse).Assembly,
+                typeof(LoginCommand).Assembly,
                 typeof(StudentServiceModel).Assembly
             )
         );

@@ -1,7 +1,6 @@
-﻿using Lea.Data.Entities.Channels;
-using Lea.Data.Entities.Core;
-using Lea.Data.Entities.Secondary;
-using Lea.Data.Entities.Tests;
+﻿using Lea.Data.Entities.Core;
+using Lea.Data.Entities.Examination;
+using Lea.Data.Entities.Messaging;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,7 +8,10 @@ namespace Lea.Data;
 
 public class LeaDbContext : IdentityDbContext
 {
-    
+    public LeaDbContext(DbContextOptions<LeaDbContext> options)
+        : base(options)
+    {
+    }
 
     //Core
     public DbSet<Course> Courses { get; set; }
@@ -19,8 +21,8 @@ public class LeaDbContext : IdentityDbContext
 
     //Secondary
     public DbSet<Folder> Folders { get; set; }
-    public DbSet<TestQuestion> TestQuestions { get; set; }
-    public DbSet<TestAnswerOption> TestAnswerOptions { get; set; }
+    public DbSet<ExamQuestion> TestQuestions { get; set; }
+    public DbSet<ExamQuestionAnswerOption> TestAnswerOptions { get; set; }
 
     //Channels
     public DbSet<Channel> Channels { get; set; }
@@ -30,8 +32,8 @@ public class LeaDbContext : IdentityDbContext
     public DbSet<PollOption> PollOptions { get; set; }
 
     //Tests
-    public DbSet<UpcomingTest> UpcomingTests { get; set; }
-    public DbSet<PastTest> PastTests { get; set; }
+    public DbSet<UpcomingExam> UpcomingTests { get; set; }
+    public DbSet<PastExam> PastTests { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         => modelBuilder.ApplyConfigurationsFromAssembly(typeof(LeaDbContext).Assembly);    

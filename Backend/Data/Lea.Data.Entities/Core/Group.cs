@@ -1,5 +1,5 @@
 ﻿using Lea.Data.Common;
-using Lea.Data.Entities.Tests;
+using Lea.Data.Entities.Examination;
 
 namespace Lea.Data.Entities.Core;
 
@@ -15,6 +15,6 @@ public class Group : LeaEntity
 
     public virtual ICollection<Student> Students { get; set; }
 
-    public virtual ICollection<UpcomingTest> UpcomingTests { get; set; }
+    public virtual ICollection<UpcomingExam> UpcomingTests { get; set; }
 
 }

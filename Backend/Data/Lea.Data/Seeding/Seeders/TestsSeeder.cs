@@ -1,12 +1,12 @@
-﻿using Lea.Data.Repositories.Tests;
+﻿using Lea.Data.Repositories.Examination;
 
 namespace Lea.Data.Seeding.Seeders;
 
-public class TestsSeeder : BaseSeeder<UpcomingTestsRepository>
+public class TestsSeeder : BaseSeeder<UpcomingExamsRepository>
 {
     public TestsSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext, serviceProvider)
     {
-        dataToSeed = new UpcomingTestsRepository[]
+        dataToSeed = new UpcomingExamsRepository[]
         {
 
         };

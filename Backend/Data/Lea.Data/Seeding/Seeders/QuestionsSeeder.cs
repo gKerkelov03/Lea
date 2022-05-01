@@ -1,12 +1,12 @@
-﻿using Lea.Data.Repositories.Secondary;
+﻿using Lea.Data.Repositories.Examination;
 
 namespace Lea.Data.Seeding.Seeders;
 
-public class QuestionsSeeder : BaseSeeder<TestQuestionsRepository>
+public class QuestionsSeeder : BaseSeeder<ExamQuestionsRepository>
 {
     public QuestionsSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext, serviceProvider)
     {
-        dataToSeed = new TestQuestionsRepository[]
+        dataToSeed = new ExamQuestionsRepository[]
         {
 
         };

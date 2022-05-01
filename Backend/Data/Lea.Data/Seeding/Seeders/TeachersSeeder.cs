@@ -1,4 +1,4 @@
-﻿using Lea.Data.Repositories.Channels;
+﻿using Lea.Data.Repositories.Messaging;
 
 namespace Lea.Data.Seeding.Seeders;
 

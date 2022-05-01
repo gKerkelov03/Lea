@@ -1,5 +1,5 @@
 ﻿using Lea.Data.Common;
-using Lea.Data.Entities.Secondary;
+using Lea.Data.Entities.Examination;
 
 namespace Lea.Data.Entities.Core;
 

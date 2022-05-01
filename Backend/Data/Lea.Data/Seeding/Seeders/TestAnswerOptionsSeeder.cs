@@ -1,12 +1,12 @@
-﻿using Lea.Data.Entities.Secondary;
+﻿using Lea.Data.Entities.Examination;
 
 namespace Lea.Data.Seeding.Seeders;
 
-public class TestAnswerOptionsSeeder : BaseSeeder<TestAnswerOption>
+public class TestAnswerOptionsSeeder : BaseSeeder<ExamQuestionAnswerOption>
 {
     public TestAnswerOptionsSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext, serviceProvider)
     {
-        dataToSeed = new TestAnswerOption[]
+        dataToSeed = new ExamQuestionAnswerOption[]
         {
 
         };

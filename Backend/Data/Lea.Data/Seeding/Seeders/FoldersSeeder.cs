@@ -1,4 +1,4 @@
-﻿using Lea.Data.Repositories.Secondary;
+﻿using Lea.Data.Repositories.Examination;
 
 namespace Lea.Data.Seeding.Seeders;
 

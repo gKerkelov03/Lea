@@ -1,6 +1,6 @@
 ﻿using Lea.Data.Common;
+using Lea.Data.Entities.Examination;
 using Lea.Data.Entities.Identity;
-using Lea.Data.Entities.Tests;
 
 namespace Lea.Data.Entities.Core;
 
@@ -12,7 +12,7 @@ public class Student : LeaEntity
 
     public virtual LeaUser User { get; set; }
 
-    public virtual ICollection<PastTest> PastTests { get; set; }
+    public virtual ICollection<PastExam> PastTests { get; set; }
 
     public virtual ICollection<Group> Groups { get; set; }
 }

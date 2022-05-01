@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="CloudinaryDotNet" Version="1.17.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
@@ -18,8 +19,10 @@
     <ProjectReference Include="..\..\Services\Lea.Services.AutoMapper\Lea.Services.AutoMapper.csproj" />
     <ProjectReference Include="..\..\Services\Lea.Services.Data\Lea.Services.Data.csproj" />
     <ProjectReference Include="..\..\Services\Lea.Services.Emails\Lea.Services.Emails.csproj" />
-    <ProjectReference Include="..\Lea.Web.BindingModels\Lea.Web.BindingModels.csproj" />
-    <ProjectReference Include="..\Lea.Web.ResponseModels\Lea.Web.ResponseModels.csproj" />
+    <ProjectReference Include="..\Lea.Web.Commands\Lea.Web.Commands.csproj" />
+    <ProjectReference Include="..\Lea.Web.Handlers\Lea.Web.Handlers.csproj" />
+    <ProjectReference Include="..\Lea.Web.ResponseModels\Lea.Web.Responses.csproj" />
+    <ProjectReference Include="..\Lea.Web.Responses\Lea.Web.Responses.csproj" />
   </ItemGroup>
 
 </Project>

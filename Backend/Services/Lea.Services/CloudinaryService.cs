@@ -1,7 +1,7 @@
 ﻿
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
-using Lea.Services.Contracts;
+using Lea.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 
 namespace Lea.Services;
