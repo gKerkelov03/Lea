@@ -8,9 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Services\Lea.Services.Data\Lea.Services.Data.csproj" />
     <ProjectReference Include="..\Lea.Web.Commands\Lea.Web.Commands.csproj" />
     <ProjectReference Include="..\Lea.Web.Responses\Lea.Web.Responses.csproj" />
   </ItemGroup>

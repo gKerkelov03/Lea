@@ -21,7 +21,6 @@
     <ProjectReference Include="..\..\Services\Lea.Services.Emails\Lea.Services.Emails.csproj" />
     <ProjectReference Include="..\Lea.Web.Commands\Lea.Web.Commands.csproj" />
     <ProjectReference Include="..\Lea.Web.Handlers\Lea.Web.Handlers.csproj" />
-    <ProjectReference Include="..\Lea.Web.ResponseModels\Lea.Web.Responses.csproj" />
     <ProjectReference Include="..\Lea.Web.Responses\Lea.Web.Responses.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,8 @@
-﻿namespace Lea.Services.Data.Models.Messaging;
+﻿using Lea.Data.Entities.Messaging;
+using Lea.Services.AutoMapper.Conventions;
 
-public class DirectMessageServiceModel
+namespace Lea.Services.Data.Models.Messaging;
+
+public class DirectMessageServiceModel : BaseServiceModel, IMapToAndFrom<DirectMessage>
 {
 }

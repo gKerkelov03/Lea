@@ -1,32 +1,22 @@
 ﻿using Lea.Web.Commands.Examination.UpcomingExams;
-using Lea.Web.Handlers.Examination.UpcomingExams;
 using Lea.Web.Responses.Examination.UpcomingExams;
 
 namespace Lea.Web.Controllers.Examination;
 
 public class UpcomingExamsController : ApiController
 {
-    public CreateUpcomingExamResponse CreateUpcomingTest(CreateUpcomingExamCommand createUpcomingTestCommand)
-    {
+    public async Task<CreateUpcomingExamResponse> CreateUpcomingExam(CreateUpcomingExamCommand createUpcomingExamCommand)
+    => await this.Mediator.Send(createUpcomingExamCommand);
 
-    }
+    public async Task<GetUpcomingExamResponse> GetUpcomingExam(GetUpcomingExamCommand getUpcomingExamCommand)
+   => await this.Mediator.Send(getUpcomingExamCommand);
 
-    public GetUpcomingExamResponse GetUpcomingTest(GetUpcomingTestCommand getUpcomingTestCommand)
-    {
+    public async Task<GetAllUpcomingExamsResponse> GetAllUpcomingExams(GetAllUpcomingExamsCommand getAllUpcomingExamsCommand)
+    => await this.Mediator.Send(getAllUpcomingExamsCommand);
 
-    }
-    public GetAllUpcomingExamsResponse GetAllUpcomingTests(GetAllUpcomingExamsCommand getAllUpcomingTestsCommand)
-    {
+    public async Task<UpdateUpcomingExamResponse> UpdateUpcomingExam(UpdateUpcomingExamCommand updateUpcomingExamCommand)
+    => await this.Mediator.Send(updateUpcomingExamCommand);
 
-    }
-
-    public UpdateUpcomingExamResponse UpdateUpcomingTest(UpdateUpcomingExamCommand updateUpcomingTestCommand)
-    {
-
-    }
-
-    public DeleteUpcomingExamResponse DeleteUpcomingTest(DeleteUpcomingExamCommand deleteUpcomingTestCommand)
-    {
-
-    }
+    public async Task<DeleteUpcomingExamResponse> DeleteUpcomingExam(DeleteUpcomingExamCommand deleteUpcomingExamCommand)
+    => await this.Mediator.Send(deleteUpcomingExamCommand);
 }

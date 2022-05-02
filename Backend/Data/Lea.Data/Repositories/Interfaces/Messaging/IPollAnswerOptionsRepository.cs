@@ -2,6 +2,6 @@
 
 namespace Lea.Data.Repositories.Interfaces.Messaging;
 
-public interface IPollOptionsRepository : IBaseRepository<PollOption>
+public interface IPollAnswerOptionsRepository : IBaseRepository<PollAnswerOption>
 {
 }

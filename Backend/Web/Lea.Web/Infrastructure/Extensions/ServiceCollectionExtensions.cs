@@ -7,11 +7,9 @@ using Lea.Data.Entities.Identity;
 using Lea.Services.AutoMapper;
 using Lea.Services.Data.Models.Core;
 using Lea.Web.Commands.Identity;
-using Lea.Web.Handlers.Identity;
 using Lea.Web.Responses.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 

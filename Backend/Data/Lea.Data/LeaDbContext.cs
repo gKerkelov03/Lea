@@ -29,7 +29,7 @@ public class LeaDbContext : IdentityDbContext
     public DbSet<ChannelMessage> ChannelMessages { get; set; }
     public DbSet<Emoji> Emojis { get; set; }
     public DbSet<Poll> Polls { get; set; }
-    public DbSet<PollOption> PollOptions { get; set; }
+    public DbSet<PollAnswerOption> PollOptions { get; set; }
 
     //Tests
     public DbSet<UpcomingExam> UpcomingTests { get; set; }

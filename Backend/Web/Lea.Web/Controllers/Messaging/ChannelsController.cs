@@ -1,33 +1,22 @@
 ﻿using Lea.Web.Commands.Messaging.Channels;
-using Lea.Web.Handlers.Messaging.Channels;
 using Lea.Web.Responses.Messaging.Channels;
 
 namespace Lea.Web.Controllers.Messaging;
 
 public class ChannelsController : ApiController
 {
-    public CreateChannelResponse CreateChannel(CreateChannelCommand createChannelCommand)
-    {
+    public async Task<CreateChannelResponse> CreateChannel(CreateChannelCommand createChannelCommand)
+    => await this.Mediator.Send(createChannelCommand);
 
-    }
+    public async Task<DeleteChannelResponse> DeleteChannel(DeleteChannelCommand deleteChannelCommand)
+    => await this.Mediator.Send(deleteChannelCommand);
 
-    public DeleteChannelResponse DeleteChannel(DeleteChannelCommand deleteChannelCommand)
-    {
+    public async Task<EditChannelResponse> EditChannel(EditChannelCommand editChannelCommand)
+    => await this.Mediator.Send(editChannelCommand);
 
-    }
+    public async Task<GetChannelResponse> GetChannel(GetChannelCommand getChannelCommand)
+    => await this.Mediator.Send(getChannelCommand);
 
-    public EditChannelResponse EditChannel(EditChannelCommand editChannelCommand)
-    {
-
-    }
-
-    public GetChannelResponse GetChannel(GetChannelCommand getChannelCommand)
-    {
-
-    }
-
-    public GetAllChannelsResponse GetAllChannels(GetAllChannelsCommand getAllChannelsCommand)
-    {
-
-    }
+    public async Task<GetAllChannelsResponse> GetAllChannels(GetAllChannelsCommand getAllChannelsCommand)
+    => await this.Mediator.Send(getAllChannelsCommand);
 }

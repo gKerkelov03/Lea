@@ -1,10 +1,5 @@
 ﻿using Lea.Data.Common;
 using Lea.Data.Entities.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lea.Data.Entities.Messaging;
 public class DirectMessage : LeaEntity

@@ -1,28 +1,19 @@
 ﻿using Lea.Web.Commands.Core.Lectors;
-using Lea.Web.Handlers.Core.Lectors;
 using Lea.Web.Responses.Core.Lectors;
 
 namespace Lea.Web.Controllers.Core;
 
 public class LectorsController : ApiController
 {
-    public AddLectorResponse AddLector(AddLectorCommand addLectureRoleCommand)
-    {
-        
-    }
+    public async Task<AddLectorResponse> AddLector(AddLectorCommand addLectureRoleCommand)
+        => await this.Mediator.Send(addLectureRoleCommand);
 
-    public DeleteLectorResponse DeleteLector(DeleteLectorCommand deleteLectorRoleCommand)
-    {
+    public async Task<DeleteLectorResponse> DeleteLector(DeleteLectorCommand deleteLectorRoleCommand)
+        => await this.Mediator.Send(deleteLectorRoleCommand);
 
-    }
+    public async Task<GetLectorResponse> GetLector(GetLectorCommand getLectorCommand)
+        => await this.Mediator.Send(getLectorCommand);
 
-    public GetLectorResponse GetLector(GetLectorCommand getLectorCommand)
-    {
-
-    }
-
-    public GetAllLectorsResponse GetAllLectors(GetAllLectorsCommand getAllLectorsCommand)
-    {
-
-    }
+    public async Task<GetAllLectorsResponse> GetAllLectors(GetAllLectorsCommand getAllLectorsCommand)
+        => await this.Mediator.Send(getAllLectorsCommand);
 }

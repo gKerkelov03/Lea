@@ -1,5 +1,19 @@
-﻿namespace Lea.Web.Handlers.Examination.ExamQuestions;
+﻿using Lea.Services.Data.Interfaces.Examination;
+using Lea.Web.Commands.Examination.ExamQuestions;
+using Lea.Web.Responses.Examination.ExamQuestions;
+using MediatR;
 
-public class UpdateExamQuestionHandler
+namespace Lea.Web.Handlers.Examination.ExamQuestions;
+
+public class UpdateExamQuestionHandler : IRequestHandler<UpdateExamQuestionCommand, UpdateExamQuestionResponse>
 {
+    private readonly IExamQuestionsService examQuestionsService;
+
+    public UpdateExamQuestionHandler(IExamQuestionsService examQuestionsService)
+        => this.examQuestionsService = examQuestionsService;
+
+    public Task<UpdateExamQuestionResponse> Handle(UpdateExamQuestionCommand request, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
 }

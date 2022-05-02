@@ -1,23 +1,16 @@
 ﻿using Lea.Web.Commands.Messaging.ChannelMessages;
-using Lea.Web.Handlers.Messaging.ChannelMessages;
 using Lea.Web.Responses.Messaging.ChannelMessages;
 
 namespace Lea.Web.Controllers.Messaging;
 
-public class ChannelMessagesController
+public class ChannelMessagesController : ApiController
 {
-    public SendChannelMessageResponse SendChannelMessage(SendChannelMessageCommand saveChannelMessageCommand)
-    {
+    public async Task<SendChannelMessageResponse> SendChannelMessage(SendChannelMessageCommand sendChannelMessageCommand)
+        => await this.Mediator.Send(sendChannelMessageCommand);
 
-    }
+    public async Task<GetChannelMessageResponse> GetChannelMessage(GetChannelMessageCommand getChannelMessageCommand)
+        => await this.Mediator.Send(getChannelMessageCommand);
 
-    public GetChannelMessageResponse GetChannelMessage(GetChannelMessageCommand getChannelMessageCommand)
-    {
-
-    }
-
-    public GetAllChannelMessagesResponse GetAllChannelMessages(GetAllChannelMessagesCommand getChannelMessageCommand)
-    {
-
-    }
+    public async Task<GetAllChannelMessagesResponse> GetAllChannelMessages(GetAllChannelMessagesCommand getAllChannelMessagesCommand)
+        => await this.Mediator.Send(getAllChannelMessagesCommand);
 }

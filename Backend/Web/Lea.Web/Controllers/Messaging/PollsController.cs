@@ -1,23 +1,15 @@
 ﻿using Lea.Web.Commands.Messaging.Polls;
-using Lea.Web.Handlers.Messaging.Polls;
 using Lea.Web.Responses.Messaging.Polls;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Lea.Web.Controllers.Messaging;
 public class PollsController : ApiController
 {
-    public CreatePollReponse CreatePoll(CreatePollCommand createPollCommand)
-    {
+    public async Task<CreatePollReponse> CreatePoll(CreatePollCommand createPollCommand)
+    => await this.Mediator.Send(createPollCommand);
 
-    }
+    public async Task<GetPollReponse> GetPoll(GetPollCommand getPollCommand)
+    => await this.Mediator.Send(getPollCommand);
 
-    public GetPollReponse GetPoll(GetPollCommand getPollCommand)
-    {
-
-    }
-
-    public GetAllPollsResponse GetAllPolls(GetAllPollsCommand getAllPollsCommand)
-    {
-
-    }
+    public async Task<GetAllPollsResponse> GetAllPolls(GetAllPollsCommand getAllPollsCommand)
+    => await this.Mediator.Send(getAllPollsCommand);
 }

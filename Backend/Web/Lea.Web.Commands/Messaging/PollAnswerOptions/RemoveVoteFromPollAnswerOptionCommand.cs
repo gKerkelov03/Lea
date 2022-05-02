@@ -3,6 +3,6 @@ using MediatR;
 
 namespace Lea.Web.Commands.Messaging.PollQuestions;
 
-public class RemoveVoteFromPollQuestionCommand : IRequest<RemoveVoteFromPollQuestionResponse>
+public class RemoveVoteFromPollAnswerOptionCommand : IRequest<RemoveVoteFromPollAnswerOptionResponse>
 {
 }

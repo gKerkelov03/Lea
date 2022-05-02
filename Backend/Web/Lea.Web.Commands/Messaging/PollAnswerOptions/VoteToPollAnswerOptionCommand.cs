@@ -3,6 +3,6 @@ using MediatR;
 
 namespace Lea.Web.Commands.Messaging.PollQuestions;
 
-public class VoteToPollQuestionCommand : IRequest<VoteToPollQuestionResponse>
+public class VoteToPollAnswerOptionCommand : IRequest<VoteToPollAnswerOptionResponse>
 {
 }

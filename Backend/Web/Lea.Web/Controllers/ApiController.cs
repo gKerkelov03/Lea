@@ -8,5 +8,5 @@ public abstract class ApiController : ControllerBase
 {
     private IMediator mediator;
 
-    protected IMediator Mediatorr => this.HttpContext.RequestServices.GetService<IMediator>();
+    protected IMediator Mediator => this.HttpContext.RequestServices.GetService<IMediator>();
 }

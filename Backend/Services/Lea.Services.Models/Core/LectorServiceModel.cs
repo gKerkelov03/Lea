@@ -1,5 +1,8 @@
-﻿namespace Lea.Services.Data.Models.Core;
+﻿using Lea.Data.Entities.Core;
+using Lea.Services.AutoMapper.Conventions;
 
-public class LectorServiceModel
+namespace Lea.Services.Data.Models.Core;
+
+public class LectorServiceModel : BaseServiceModel, IMapToAndFrom<Lector>
 {
 }

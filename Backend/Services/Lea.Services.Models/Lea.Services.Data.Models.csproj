@@ -6,4 +6,9 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\Lea.Data.Entities\Lea.Data.Entities.csproj" />
+    <ProjectReference Include="..\Lea.Services.AutoMapper\Lea.Services.AutoMapper.csproj" />
+  </ItemGroup>
+
 </Project>

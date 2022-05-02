@@ -1,32 +1,22 @@
 ﻿using Lea.Web.Commands.Examination.ExamQuestions;
-using Lea.Web.Handlers.Examination.ExamQuestions;
 using Lea.Web.Responses.Examination.ExamQuestions;
 
 namespace Lea.Web.Controllers.Examination;
 
 public class ExamQuestionsController : ApiController
 {
-    public CreateExamQuestionResponse CreateTestQuestion(CreateTestQuestionCommand createTestQuestionCommand)
-    {
+    public async Task<CreateExamQuestionResponse> CreateExamQuestion(CreateExamQuestionCommand createExamQuestionCommand)
+        => await this.Mediator.Send(createExamQuestionCommand);
 
-    }
+    public async Task<GetExamQuestionResponse> GetExamQuestion(GetExamQuestionCommand getExamQuestionCommand)
+        => await this.Mediator.Send(getExamQuestionCommand);
 
-    public GetExamQuestionResponse GetTestQuestion(GetExamQuestionCommand getTestQuestionCommand)
-    {
+    public async Task<GetAllExamQuestionsResponse> GetAllExamQuestions(GetAllExamQuestionsCommand getAllExamQuestionsCommand)
+        => await this.Mediator.Send(getAllExamQuestionsCommand);
 
-    }
+    public async Task<UpdateExamQuestionResponse> UpdateExamQuestion(UpdateExamQuestionCommand updateExamQuestionCommand)
+        => await this.Mediator.Send(updateExamQuestionCommand);
 
-    public GetAllExamQuestionsResponse GetAllTestQuestions(GetAllExamQuestionsCommand getAllTestQuestionsCommand)
-    {
-
-    }
-    public UpdateExamQuestionResponse UpdateTestQuestion(UpdateExamQuestionCommand updateTestQuestionCommand)
-    {
-
-    }
-
-    public DeleteExamQuestionResponse DeleteTestQuestion(DeleteExamQuestionCommand deleteTestQuestionCommand)
-    {
-
-    }
+    public async Task<DeleteExamQuestionResponse> DeleteExamQuestion(DeleteExamQuestionCommand deleteExamQuestionCommand)
+        => await this.Mediator.Send(deleteExamQuestionCommand);
 }

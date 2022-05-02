@@ -9,5 +9,5 @@ public class Poll : LeaEntity
 
     public virtual Group Group { get; set; }
 
-    public virtual ICollection<PollOption> Options { get; set; }
+    public virtual ICollection<PollAnswerOption> Options { get; set; }
 }

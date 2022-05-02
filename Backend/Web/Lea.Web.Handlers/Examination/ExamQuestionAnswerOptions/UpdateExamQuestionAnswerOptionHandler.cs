@@ -1,9 +1,19 @@
-﻿using Lea.Web.Commands.Core.Courses;
-using Lea.Web.Responses.Core.Courses;
+﻿using Lea.Services.Data.Interfaces.Examination;
+using Lea.Web.Commands.Examination.ExamQuestionAnswerOptions;
+using Lea.Web.Responses.Examination.ExamQuestionAnswerOptions;
 using MediatR;
 
 namespace Lea.Web.Handlers.Examination.ExamQuestionAnswerOptions;
 
-public class UpdateExamQuestionAnswerOptionHandler
+public class UpdateExamQuestionAnswerOptionHandler : IRequestHandler<UpdateExamQuestionAnswerOptionCommand, UpdateExamQuestionAnswerOptionResponse>
 {
+    private readonly IExamQuestionAnswerOptionsService examQuestionAnswerOptionsService;
+
+    public UpdateExamQuestionAnswerOptionHandler(IExamQuestionAnswerOptionsService examQuestionAnswerOptionsService)
+        => this.examQuestionAnswerOptionsService = examQuestionAnswerOptionsService;
+
+    public Task<UpdateExamQuestionAnswerOptionResponse> Handle(UpdateExamQuestionAnswerOptionCommand request, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
 }

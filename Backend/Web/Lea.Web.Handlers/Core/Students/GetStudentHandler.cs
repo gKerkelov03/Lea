@@ -1,12 +1,18 @@
-﻿using Lea.Web.Commands.Core.Courses;
-using Lea.Web.Responses.Core.Courses;
+﻿using Lea.Services.Data.Interfaces.Core;
+using Lea.Web.Commands.Core.Students;
+using Lea.Web.Responses.Core.Students;
 using MediatR;
 
 namespace Lea.Web.Handlers.Core.Students;
 
-public class GetStudentHandler : IRequestHandler<ChangeCourseBackgroundImageCommand, ChangeCourseBackgroundImageResponse>
+public class GetStudentHandler : IRequestHandler<GetStudentCommand, GetStudentResponse>
 {
-    public Task<ChangeCourseBackgroundImageResponse> Handle(ChangeCourseBackgroundImageCommand request, CancellationToken cancellationToken)
+    private readonly IStudentsService groupsService;
+
+    public GetStudentHandler(IStudentsService groupsService)
+        => this.groupsService = groupsService;
+
+    public Task<GetStudentResponse> Handle(GetStudentCommand request, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

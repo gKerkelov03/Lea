@@ -1,5 +1,4 @@
-﻿using Lea.Data.Entities.Channels;
-using Lea.Data.Entities.Messaging;
+﻿using Lea.Data.Entities.Messaging;
 using Lea.Data.Repositories.Interfaces.Messaging;
 
 namespace Lea.Data.Repositories.Messaging;

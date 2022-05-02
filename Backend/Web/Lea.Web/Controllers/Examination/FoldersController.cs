@@ -1,33 +1,22 @@
 ﻿using Lea.Web.Commands.Examination.Folders;
-using Lea.Web.Handlers.Examination.Folders;
 using Lea.Web.Responses.Examination.Folders;
 
 namespace Lea.Web.Controllers.Examination;
 
 public class FoldersController : ApiController
 {
-    public CreateFolderResponse CreateFolder(CreateFolderCommand createFolderCommand)
-    {
+    public async Task<CreateFolderResponse> CreateFolder(CreateFolderCommand createFolderCommand)
+        => await this.Mediator.Send(createFolderCommand);
 
-    }
+    public async Task<GetFolderResponse> GetFolder(GetFolderCommand getFolderCommand)
+        => await this.Mediator.Send(getFolderCommand);
 
-    public GetFolderResponse GetFolder(GetFolderCommand getFolderCommand)
-    {
+    public async Task<GetAllFoldersResponse> GetAllFolders(GetAllFoldersCommand getAllCommand)
+        => await this.Mediator.Send(getAllCommand);
 
-    }
+    public async Task<UpdateFolderResponse> UpdateFolder(UpdateFolderCommand updateFolderCommand)
+        => await this.Mediator.Send(updateFolderCommand);
 
-    public GetAllFoldersResponse GetAllFolders(GetAllFoldersCommand getAllCommand)
-    {
-
-    }
-
-    public UpdateFolderResponse UpdateFolder(UpdateFolderCommand updateFolderCommand)
-    {
-
-    }
-
-    public DeleteFolderResponse DeleteFolder(DeleteFolderCommand deleteFolderCommand)
-    {
-
-    }
+    public async Task<DeleteFolderResponse> DeleteFolder(DeleteFolderCommand deleteFolderCommand)
+        => await this.Mediator.Send(deleteFolderCommand);
 }

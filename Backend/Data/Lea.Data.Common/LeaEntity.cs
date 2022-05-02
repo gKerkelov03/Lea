@@ -5,8 +5,5 @@ public class LeaEntity
 {
     public Guid Id { get; set; }
 
-    public LeaEntity()
-    {
-        this.Id = Guid.NewGuid();
-    }
+    public LeaEntity() => this.Id = Guid.NewGuid();
 }

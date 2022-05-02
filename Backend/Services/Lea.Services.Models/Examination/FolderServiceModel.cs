@@ -1,5 +1,8 @@
-﻿namespace Lea.Services.Data.Models.Examination;
+﻿using Lea.Data.Entities.Examination;
+using Lea.Services.AutoMapper.Conventions;
 
-public class FolderServiceModel
+namespace Lea.Services.Data.Models.Examination;
+
+public class FolderServiceModel : BaseServiceModel, IMapToAndFrom<Folder>
 {
 }

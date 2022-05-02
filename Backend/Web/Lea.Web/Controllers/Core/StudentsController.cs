@@ -1,28 +1,19 @@
 ﻿using Lea.Web.Commands.Core.Students;
-using Lea.Web.Handlers.Core.Students;
 using Lea.Web.Responses.Core.Students;
 
 namespace Lea.Web.Controllers.Core;
 
 public class StudentsController : ApiController
 {
-    public AddStudentResponse AddStudent(AddStudentCommand addStudentCommand)
-    {
+    public async Task<AddStudentResponse> AddStudent(AddStudentCommand addStudentCommand)
+        => await this.Mediator.Send(addStudentCommand);
 
-    }
+    public async Task<DeleteStudentResponse> DeleteStudent(DeleteStudentCommand deleteStudentCommand)
+        => await this.Mediator.Send(deleteStudentCommand);
 
-    public DeleteStudentResponse DeleteStudent(DeleteStudentCommand deleteStudentCommand)
-    {
+    public async Task<GetStudentResponse> GetStudent(GetStudentCommand getStudentCommand)
+        => await this.Mediator.Send(getStudentCommand);
 
-    }
-
-    public GetStudentResponse GetStudent(GetStudentCommand getStudentCommand)
-    {
-
-    }
-
-    public GetAllStudentsResponse GetAllStudents(GetAllStudentsCommand getAllStudentsCommand)
-    {
-
-    }
+    public async Task<GetAllStudentsResponse> GetAllStudents(GetAllStudentsCommand getAllStudentsCommand)
+        => await this.Mediator.Send(getAllStudentsCommand);
 }

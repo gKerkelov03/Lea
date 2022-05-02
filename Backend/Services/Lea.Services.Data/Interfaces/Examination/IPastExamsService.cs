@@ -3,6 +3,6 @@ using Lea.Services.Data.Models.Examination;
 
 namespace Lea.Services.Data.Interfaces.Examination;
 
-public interface IPastTestsService : IBaseDataService<PastExam, PastExamServiceModel>
+public interface IPastExamsService : IBaseDataService<PastExam, PastExamServiceModel>
 {
 }

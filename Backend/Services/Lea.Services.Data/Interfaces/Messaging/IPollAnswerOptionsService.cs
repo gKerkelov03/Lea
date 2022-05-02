@@ -3,6 +3,6 @@ using Lea.Services.Data.Models.Messaging;
 
 namespace Lea.Services.Data.Interfaces.Messaging;
 
-public interface IPollOptionsService : IBaseDataService<PollOption, PollOptionServiceModel>
+public interface IPollAnswerOptionsService : IBaseDataService<PollAnswerOption, PollAnswerOptionServiceModel>
 {
 }

@@ -6,7 +6,7 @@ using Lea.Services.Data.Models.Examination;
 
 namespace Lea.Services.Data.Examination;
 
-public class ExamQuestionsService : BaseDataService<ExamQuestion, ExamQuestionServiceModel, ExamQuestionsRepository>, ITestQuestionsService
+public class ExamQuestionsService : BaseDataService<ExamQuestion, ExamQuestionServiceModel, ExamQuestionsRepository>, IExamQuestionsService
 {
     public ExamQuestionsService(ExamQuestionsRepository repository, IMapper mapper) : base(repository, mapper)
     {

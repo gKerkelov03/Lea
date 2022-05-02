@@ -1,32 +1,22 @@
 ﻿using Lea.Web.Commands.Examination.PastExams;
-using Lea.Web.Handlers.Examination.PastExams;
 using Lea.Web.Responses.Examination.PastExams;
 
 namespace Lea.Web.Controllers.Examination;
 
 public class PastExamsController : ApiController
 {
-    public CreatePastExamResponse CreatePastTest(CreatePastExamCommand createPastTestCommand)
-    {
+    public async Task<CreatePastExamResponse> CreatePastExam(CreatePastExamCommand createPastExamCommand)
+        => await this.Mediator.Send(createPastExamCommand);
 
-    }
+    public async Task<GetPastExamResponse> GetPastExam(GetPastExamCommand getPastExamCommand)
+        => await this.Mediator.Send(getPastExamCommand);
 
-    public GetPastExamResponse GetPastTest(GetPastTestCommand getPastTestCommand)
-    {
+    public async Task<GetAllPastExamsResponse> GetAllPastExams(GetAllPastExamsCommand getAllPastExamsCommand)
+        => await this.Mediator.Send(getAllPastExamsCommand);
 
-    }
+    public async Task<UpdatePastExamResponse> UpdatePastExam(UpdatePastExamCommand updatePastExamCommand)
+        => await this.Mediator.Send(updatePastExamCommand);
 
-    public GetAllPastExamsResponse GetAllPastTests(GetAllPastExamsCommand getAllPastTestsCommand)
-    {
-
-    }
-    public UpdatePastExamResponse UpdatePastTest(UpdatePastExamCommand updatePastTestCommand)
-    {
-
-    }
-
-    public DeletePastExamResponse DeletePastTest(DeletePastExamCommand deletePastTestCommand)
-    {
-
-    }
+    public async Task<DeletePastExamResponse> DeletePastExam(DeletePastExamCommand deletePastExamCommand)
+        => await this.Mediator.Send(deletePastExamCommand);
 }

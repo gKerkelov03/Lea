@@ -1,5 +1,8 @@
-﻿namespace Lea.Services.Data.Models.Examination;
+﻿using Lea.Data.Entities.Examination;
+using Lea.Services.AutoMapper.Conventions;
 
-public class ExamQuestionAnswerOptionServiceModel
+namespace Lea.Services.Data.Models.Examination;
+
+public class ExamQuestionAnswerOptionServiceModel : BaseServiceModel, IMapToAndFrom<ExamQuestionAnswerOption>
 {
 }

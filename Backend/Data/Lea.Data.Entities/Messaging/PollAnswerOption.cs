@@ -3,7 +3,7 @@ using Lea.Data.Entities.Core;
 
 namespace Lea.Data.Entities.Messaging;
 
-public class PollOption : LeaEntity
+public class PollAnswerOption : LeaEntity
 {
     public string Text { get; set; }
 
