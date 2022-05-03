@@ -8,5 +8,8 @@ public class Emoji : LeaEntity
 
     public string Name { get; set; }
 
-    public virtual ICollection<ChannelMessage> MessagesMarkedWithIt { get; set; }
+    public virtual ICollection<ChannelMessage> ChannelMessagesMarkedWithIt { get; set; }
+
+    public virtual ICollection<ChannelMessage> DirectMessagesMarkedWithIt { get; set; }
+
 }

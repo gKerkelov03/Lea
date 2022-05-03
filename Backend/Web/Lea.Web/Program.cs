@@ -15,7 +15,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddLeaDbContext(builder.Configuration);
-
 builder.Services.AddLeaIdentity(builder.Configuration);
 
 #endregion

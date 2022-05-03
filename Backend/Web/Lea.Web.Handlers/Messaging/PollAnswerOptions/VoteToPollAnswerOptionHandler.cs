@@ -1,9 +1,9 @@
 ﻿using Lea.Services.Data.Interfaces.Messaging;
-using Lea.Web.Commands.Messaging.PollQuestions;
-using Lea.Web.Responses.Messaging.PollQuestions;
+using Lea.Web.Commands.Messaging.PollAnswerOptions;
+using Lea.Web.Responses.Messaging.PollAnswerOptions;
 using MediatR;
 
-namespace Lea.Web.Handlers.Messaging.PollQuestions;
+namespace Lea.Web.Handlers.Messaging.PollAnswerOptions;
 
 public class VoteToPollAnswerOptionHandler : IRequestHandler<VoteToPollAnswerOptionCommand, VoteToPollAnswerOptionResponse>
 {

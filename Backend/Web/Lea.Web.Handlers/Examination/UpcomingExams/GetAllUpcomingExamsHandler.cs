@@ -1,11 +1,11 @@
 ﻿using Lea.Services.Data.Interfaces.Examination;
-using Lea.Web.Commands.Examination.UpcomingExams;
-using Lea.Web.Responses.Examination.UpcomingExams;
+using Lea.Web.Commands.Core.Groups;
+using Lea.Web.Responses.Core.Groups;
 using MediatR;
 
 namespace Lea.Web.Handlers.Examination.UpcomingExams;
 
-public class GetAllUpcomingExamsHandler : IRequestHandler<GetAllUpcomingExamsCommand, GetAllUpcomingExamsResponse>
+public class GetAllUpcomingExamsHandler : IRequestHandler<GetAllUpcomingExamsForAGroupCommand, GetAllUpcomingExamsForAGroupResponse>
 {
     private readonly IUpcomingExamsService upcomingExamsService;
 
@@ -14,7 +14,7 @@ public class GetAllUpcomingExamsHandler : IRequestHandler<GetAllUpcomingExamsCom
         this.upcomingExamsService = upcomingExamsService;
     }
 
-    public Task<GetAllUpcomingExamsResponse> Handle(GetAllUpcomingExamsCommand request, CancellationToken cancellationToken)
+    public Task<GetAllUpcomingExamsForAGroupResponse> Handle(GetAllUpcomingExamsForAGroupCommand request, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

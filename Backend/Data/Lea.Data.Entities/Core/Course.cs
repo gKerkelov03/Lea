@@ -20,6 +20,4 @@ public class Course : LeaEntity
     public virtual ICollection<Lector> Lectors { get; set; }
 
     public virtual ICollection<Lector> Students { get; set; }
-
-
 }

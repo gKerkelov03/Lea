@@ -1,22 +1,25 @@
-﻿using Lea.Web.Commands.Examination.ExamQuestions;
+﻿using Lea.Web.Commands.Examination.ExamQuestionAnswerOptions;
+using Lea.Web.Commands.Examination.ExamQuestions;
+using Lea.Web.Responses.Examination.ExamQuestionAnswerOptions;
 using Lea.Web.Responses.Examination.ExamQuestions;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Lea.Web.Controllers.Examination;
 
 public class ExamQuestionsController : ApiController
 {
-    public async Task<CreateExamQuestionResponse> CreateExamQuestion(CreateExamQuestionCommand createExamQuestionCommand)
+    public async Task<ActionResult<CreateExamQuestionResponse>> CreateExamQuestion(CreateExamQuestionCommand createExamQuestionCommand)
         => await this.Mediator.Send(createExamQuestionCommand);
 
-    public async Task<GetExamQuestionResponse> GetExamQuestion(GetExamQuestionCommand getExamQuestionCommand)
+    public async Task<ActionResult<GetExamQuestionResponse>> GetExamQuestion(GetExamQuestionCommand getExamQuestionCommand)
         => await this.Mediator.Send(getExamQuestionCommand);
-
-    public async Task<GetAllExamQuestionsResponse> GetAllExamQuestions(GetAllExamQuestionsCommand getAllExamQuestionsCommand)
-        => await this.Mediator.Send(getAllExamQuestionsCommand);
-
-    public async Task<UpdateExamQuestionResponse> UpdateExamQuestion(UpdateExamQuestionCommand updateExamQuestionCommand)
+    
+    public async Task<ActionResult<UpdateExamQuestionResponse>> UpdateExamQuestion(UpdateExamQuestionCommand updateExamQuestionCommand)
         => await this.Mediator.Send(updateExamQuestionCommand);
 
-    public async Task<DeleteExamQuestionResponse> DeleteExamQuestion(DeleteExamQuestionCommand deleteExamQuestionCommand)
+    public async Task<ActionResult<DeleteExamQuestionResponse>> DeleteExamQuestion(DeleteExamQuestionCommand deleteExamQuestionCommand)
         => await this.Mediator.Send(deleteExamQuestionCommand);
+
+    public async Task<ActionResult<CreateExamQuestionAnswerOptionResponse>> CreateExamQuestionAnswerOption(CreateExamQuestionAnswerOptionCommand createExamAnswerOptionCommand)
+       => await this.Mediator.Send(createExamAnswerOptionCommand);
 }

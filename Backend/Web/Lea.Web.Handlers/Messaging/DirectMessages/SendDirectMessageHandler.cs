@@ -1,6 +1,6 @@
 ﻿using Lea.Services.Data.Interfaces.Messaging;
 using Lea.Web.Commands.Messaging.DirectMessages;
-using Lea.Web.Responses.Examination.DirectMessages;
+using Lea.Web.Responses.Messaging.DirectMessages;
 using MediatR;
 
 namespace Lea.Web.Handlers.Messaging.DirectMessages;

@@ -1,4 +1,4 @@
-﻿using Lea.Web.Responses.Examination.DirectMessages;
+﻿using Lea.Web.Responses.Messaging.DirectMessages;
 using MediatR;
 
 namespace Lea.Web.Commands.Messaging.DirectMessages;

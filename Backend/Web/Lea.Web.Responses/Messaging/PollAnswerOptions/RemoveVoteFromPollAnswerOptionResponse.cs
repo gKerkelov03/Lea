@@ -1,4 +1,4 @@
-﻿namespace Lea.Web.Responses.Messaging.PollQuestions;
+﻿namespace Lea.Web.Responses.Messaging.PollAnswerOptions;
 
 public class RemoveVoteFromPollAnswerOptionResponse
 {

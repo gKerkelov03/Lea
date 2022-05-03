@@ -7,7 +7,7 @@ public class Group : LeaEntity
 {
     public string Name { get; set; }
 
-    public string BackgroundImageUrl { get; set; }
+    public string PictureUrl { get; set; }
 
     public virtual Course Course { get; set; }
 
