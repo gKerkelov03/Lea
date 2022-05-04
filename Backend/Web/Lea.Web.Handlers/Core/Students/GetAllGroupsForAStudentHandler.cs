@@ -9,14 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lea.Web.Handlers.Core.Students;
-public class GetAllUpcomingExamsForAStudentHandler : IRequestHandler<GetAllUpcomingExamsForAStudentCommand, GetAllUpcomingExamsForAStudentResponse>
+public class GetAllGroupsForAStudentHandler : IRequestHandler<GetAllGroupsForAStudentCommand, GetAllGroupsForAStudentResponse>
 {
     private readonly IStudentsService studentsService;
 
-    public GetAllUpcomingExamsForAStudentHandler(IStudentsService groupsService)
+    public GetAllGroupsForAStudentHandler(IStudentsService groupsService)
         => this.studentsService = groupsService;
 
-    public Task<GetAllUpcomingExamsForAStudentResponse> Handle(GetAllUpcomingExamsForAStudentCommand request, CancellationToken cancellationToken)
+    public Task<GetAllGroupsForAStudentResponse> Handle(GetAllGroupsForAStudentCommand request, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

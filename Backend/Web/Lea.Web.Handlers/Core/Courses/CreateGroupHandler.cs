@@ -3,7 +3,7 @@ using Lea.Web.Commands.Core.Groups;
 using Lea.Web.Responses.Core.Groups;
 using MediatR;
 
-namespace Lea.Web.Handlers.Core.Groups;
+namespace Lea.Web.Handlers.Core.Courses;
 
 public class CreateGroupHandler : IRequestHandler<CreateGroupCommand, CreateGroupResponse>
 {

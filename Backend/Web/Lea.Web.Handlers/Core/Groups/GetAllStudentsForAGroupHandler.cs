@@ -5,14 +5,14 @@ using MediatR;
 
 namespace Lea.Web.Handlers.Core.Students;
 
-public class GetAllStudentsHandler : IRequestHandler<GetAllStudentsCommand, GetAllStudentsResponse>
+public class GetAllStudentsForAGroupHandler : IRequestHandler<GetAllStudentsForAGroupCommand, GetAllStudentsForAGroupResponse>
 {
     private readonly IStudentsService groupsService;
 
-    public GetAllStudentsHandler(IStudentsService groupsService)
+    public GetAllStudentsForAGroupHandler(IStudentsService groupsService)
         => this.groupsService = groupsService;
 
-    public Task<GetAllStudentsResponse> Handle(GetAllStudentsCommand request, CancellationToken cancellationToken)
+    public Task<GetAllStudentsForAGroupResponse> Handle(GetAllStudentsForAGroupCommand request, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

@@ -10,7 +10,7 @@ public class ChannelMessage : LeaEntity
 
     public LeaUser Sender { get; set; }
 
-    public virtual Channel Chat { get; set; }
+    public virtual Channel Channel { get; set; }
 
     public virtual ICollection<Emoji> Emojis { get; set; }
 }

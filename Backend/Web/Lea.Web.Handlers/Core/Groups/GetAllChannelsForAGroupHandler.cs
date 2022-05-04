@@ -5,14 +5,14 @@ using MediatR;
 
 namespace Lea.Web.Handlers.Messaging.Channels;
 
-public class GetAllChannelsHandler : IRequestHandler<GetAllChannelsCommand, GetAllChannelsResponse>
+public class GetAllChannelsForAGroupHandler : IRequestHandler<GetAllChannelsForAGroupCommand, GetAllChannelsForAGroupResponse>
 {
     private readonly IChannelsService channelsService;
 
-    public GetAllChannelsHandler(IChannelsService channelsService)
+    public GetAllChannelsForAGroupHandler(IChannelsService channelsService)
         => this.channelsService = channelsService;
 
-    public Task<GetAllChannelsResponse> Handle(GetAllChannelsCommand request, CancellationToken cancellationToken)
+    public Task<GetAllChannelsForAGroupResponse> Handle(GetAllChannelsForAGroupCommand request, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

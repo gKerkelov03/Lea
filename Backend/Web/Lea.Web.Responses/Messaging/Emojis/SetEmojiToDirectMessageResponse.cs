@@ -1,5 +1,5 @@
 ﻿namespace Lea.Web.Responses.Messaging.Emojis;
 
-public class RemoveEmojiFromMessageResponse
+public class SetEmojiToDirectMessageResponse
 {
 }

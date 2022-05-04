@@ -3,6 +3,6 @@ using MediatR;
 
 namespace Lea.Web.Commands.Examination.PastExams;
 
-public class GetAllPastExamsCommand : IRequest<GetAllPastExamsResponse>
+public class GetAllPastExamsForAGroupCommand : IRequest<GetAllPastExamsForAGroupResponse>
 {
 }

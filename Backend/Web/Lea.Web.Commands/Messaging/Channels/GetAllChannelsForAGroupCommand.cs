@@ -3,6 +3,6 @@ using MediatR;
 
 namespace Lea.Web.Commands.Messaging.Channels;
 
-public class GetAllChannelsCommand : IRequest<GetAllChannelsResponse>
+public class GetAllChannelsForAGroupCommand : IRequest<GetAllChannelsForAGroupResponse>
 {
 }

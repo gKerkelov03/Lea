@@ -7,10 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Lea.Web.Controllers.Examination;
 
 public class FoldersController : ApiController
-{
-    public async Task<ActionResult<CreateFolderResponse>> CreateFolder(CreateFolderCommand createFolderCommand)
-        => await this.Mediator.Send(createFolderCommand);
-
+{    
     public async Task<ActionResult<GetFolderResponse>> GetFolder(GetFolderCommand getFolderCommand)
         => await this.Mediator.Send(getFolderCommand);
      
@@ -19,5 +16,4 @@ public class FoldersController : ApiController
 
     public async Task<ActionResult<DeleteFolderResponse>> DeleteFolder(DeleteFolderCommand deleteFolderCommand)
         => await this.Mediator.Send(deleteFolderCommand);
-
 }

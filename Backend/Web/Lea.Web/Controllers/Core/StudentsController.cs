@@ -17,6 +17,8 @@ public class StudentsController : ApiController
     public async Task<ActionResult<GetAllUpcomingExamsForAStudentResponse>> GetAllUpcomingExams(GetAllUpcomingExamsForAStudentCommand getAllUpcomingExamsCommand)
         => await this.Mediator.Send(getAllUpcomingExamsCommand);
 
-    public async Task<ActionResult<GetAllPastExamsResponse>> GetAllPastExams(GetAllPastExamsCommand getAllPastExamsCommand)
+    public async Task<ActionResult<GetAllPastExamsForAStudentResponse>> GetAllPastExams(GetAllPastExamsForAStudentCommand getAllPastExamsCommand)
         => await this.Mediator.Send(getAllPastExamsCommand);
+
+    
 }

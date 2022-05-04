@@ -21,4 +21,7 @@ public class LectorsController : ApiController
 
     public async Task<ActionResult<GetAllGroupsForALectorResponse>> GetAllGroups(GetAllGroupsForALectorCommand getAllGroupsCommand)
         => await this.Mediator.Send(getAllGroupsCommand);
+
+    public async Task<ActionResult<CreateFolderResponse>> CreateFolder(CreateFolderCommand createFolderCommand)
+        => await this.Mediator.Send(createFolderCommand);
 }

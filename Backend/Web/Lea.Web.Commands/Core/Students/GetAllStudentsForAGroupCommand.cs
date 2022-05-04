@@ -3,6 +3,6 @@ using MediatR;
 
 namespace Lea.Web.Commands.Core.Students;
 
-public class GetAllStudentsCommand : IRequest<GetAllStudentsResponse>
+public class GetAllStudentsForAGroupCommand : IRequest<GetAllStudentsForAGroupResponse>
 {
 }

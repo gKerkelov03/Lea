@@ -6,13 +6,11 @@ namespace Lea.Web.Controllers.Examination;
 
 public class UpcomingExamsController : ApiController
 {
-    public async Task<ActionResult<CreateUpcomingExamResponse>> CreateUpcomingExam(CreateUpcomingExamCommand createUpcomingExamCommand)
-    => await this.Mediator.Send(createUpcomingExamCommand);
+    
 
     public async Task<ActionResult<GetUpcomingExamResponse>> GetUpcomingExam(GetUpcomingExamCommand getUpcomingExamCommand)
    => await this.Mediator.Send(getUpcomingExamCommand);
-    
-    //update start time and end time
+        
     public async Task<ActionResult<UpdateUpcomingExamResponse>> UpdateUpcomingExam(UpdateUpcomingExamCommand updateUpcomingExamCommand)
     => await this.Mediator.Send(updateUpcomingExamCommand);
 

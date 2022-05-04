@@ -5,11 +5,11 @@ using MediatR;
 
 namespace Lea.Web.Handlers.Examination.UpcomingExams;
 
-public class GetAllUpcomingExamsHandler : IRequestHandler<GetAllUpcomingExamsForAGroupCommand, GetAllUpcomingExamsForAGroupResponse>
+public class GetAllUpcomingExamsForAGroupHandler : IRequestHandler<GetAllUpcomingExamsForAGroupCommand, GetAllUpcomingExamsForAGroupResponse>
 {
     private readonly IUpcomingExamsService upcomingExamsService;
 
-    public GetAllUpcomingExamsHandler(IUpcomingExamsService upcomingExamsService)
+    public GetAllUpcomingExamsForAGroupHandler(IUpcomingExamsService upcomingExamsService)
     {
         this.upcomingExamsService = upcomingExamsService;
     }

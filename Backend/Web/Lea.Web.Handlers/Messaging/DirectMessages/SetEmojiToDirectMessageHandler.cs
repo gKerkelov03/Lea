@@ -5,14 +5,14 @@ using MediatR;
 
 namespace Lea.Web.Handlers.Messaging.Emojis;
 
-public class SetEmojiToMessageHandler : IRequestHandler<SetEmojiToMessageCommand, SetEmojiToMessageResponse>
+public class SetEmojiToDirectMessageHandler : IRequestHandler<SetEmojiToDirectMessageCommand, SetEmojiToDirectMessageResponse>
 {
     private readonly IEmojisService emojisService;
 
-    public SetEmojiToMessageHandler(IEmojisService emojisService)
+    public SetEmojiToDirectMessageHandler(IEmojisService emojisService)
         => this.emojisService = emojisService;
 
-    public Task<SetEmojiToMessageResponse> Handle(SetEmojiToMessageCommand request, CancellationToken cancellationToken)
+    public Task<SetEmojiToDirectMessageResponse> Handle(SetEmojiToDirectMessageCommand request, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

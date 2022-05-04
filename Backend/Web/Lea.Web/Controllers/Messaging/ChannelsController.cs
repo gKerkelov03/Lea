@@ -7,9 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Lea.Web.Controllers.Messaging;
 
 public class ChannelsController : ApiController
-{
-    
-
+{    
     public async Task<DeleteChannelResponse> DeleteChannel(DeleteChannelCommand deleteChannelCommand)
     => await this.Mediator.Send(deleteChannelCommand);
 

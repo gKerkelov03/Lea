@@ -5,14 +5,14 @@ using MediatR;
 
 namespace Lea.Web.Handlers.Examination.PastExams;
 
-public class GetAllPastExamsHandler : IRequestHandler<GetAllPastExamsCommand, GetAllPastExamsResponse>
+public class GetAllPastExamsForAGroupHandler : IRequestHandler<GetAllPastExamsForAGroupCommand, GetAllPastExamsForAGroupResponse>
 {
     private readonly IPastExamsService pastExamsService;
 
-    public GetAllPastExamsHandler(IPastExamsService pastExamsService)
+    public GetAllPastExamsForAGroupHandler(IPastExamsService pastExamsService)
         => this.pastExamsService = pastExamsService;
 
-    public Task<GetAllPastExamsResponse> Handle(GetAllPastExamsCommand request, CancellationToken cancellationToken)
+    public Task<GetAllPastExamsForAGroupResponse> Handle(GetAllPastExamsForAGroupCommand request, CancellationToken cancellationToken)
     {
         throw new NotImplementedException();
     }

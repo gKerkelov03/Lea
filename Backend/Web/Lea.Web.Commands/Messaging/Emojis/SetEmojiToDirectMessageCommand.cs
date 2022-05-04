@@ -3,6 +3,6 @@ using MediatR;
 
 namespace Lea.Web.Commands.Messaging.Emojis;
 
-public class SetEmojiToMessageCommand : IRequest<SetEmojiToMessageResponse>
+public class SetEmojiToDirectMessageCommand : IRequest<SetEmojiToDirectMessageResponse>
 {
 }

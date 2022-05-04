@@ -8,8 +8,5 @@ public class PollsController : ApiController
     => await this.Mediator.Send(createPollCommand);
 
     public async Task<GetPollReponse> GetPoll(GetPollCommand getPollCommand)
-    => await this.Mediator.Send(getPollCommand);
-
-    public async Task<GetAllPollsResponse> GetAllPolls(GetAllPollsCommand getAllPollsCommand)
-    => await this.Mediator.Send(getAllPollsCommand);
+    => await this.Mediator.Send(getPollCommand);    
 }

@@ -1,5 +1,5 @@
 ﻿namespace Lea.Web.Responses.Core.Students;
 
-public class GetAllStudentsResponse
+public class GetAllStudentsForAGroupResponse
 {
 }
