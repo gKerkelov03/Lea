@@ -8,7 +8,10 @@ public class UsersSeeder : BaseSeeder<LeaUser>
     {
         dataToSeed = new LeaUser[]
         {
-
+            new LeaUser
+            {
+                
+            }
         };
     }
 }

@@ -1,12 +1,13 @@
 ﻿using Lea.Data.Entities.Core;
 using Lea.Data.Entities.Examination;
+using Lea.Data.Entities.Identity;
 using Lea.Data.Entities.Messaging;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lea.Data;
 
-public class LeaDbContext : IdentityDbContext
+public class LeaDbContext : IdentityDbContext<LeaUser, LeaRole, Guid>
 {
     public LeaDbContext(DbContextOptions<LeaDbContext> options)
         : base(options)
@@ -18,6 +19,7 @@ public class LeaDbContext : IdentityDbContext
     public DbSet<Group> Groups { get; set; }
     public DbSet<Lector> Lectors { get; set; }
     public DbSet<Student> Student { get; set; }
+    
 
     //Secondary
     public DbSet<Folder> Folders { get; set; }

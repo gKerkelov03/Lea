@@ -5,9 +5,7 @@ namespace Lea.Data.Entities.Core;
 
 public class Course : LeaEntity
 {
-    public string Name { get; set; }
-
-    public string Description { get; set; }
+    public string Title { get; set; }    
 
     public string PictureUrl { get; set; }
 
@@ -19,5 +17,5 @@ public class Course : LeaEntity
 
     public virtual ICollection<Lector> Lectors { get; set; }
 
-    public virtual ICollection<Lector> Students { get; set; }
+    public virtual ICollection<Student> Students { get; set; }
 }
