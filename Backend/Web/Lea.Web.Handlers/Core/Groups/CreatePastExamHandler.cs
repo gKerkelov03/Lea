@@ -1,9 +1,9 @@
-﻿using Lea.Services.Data.Interfaces.Examination;
-using Lea.Web.Commands.Examination.PastExams;
-using Lea.Web.Responses.Examination.PastExams;
+﻿using Lea.Services.Interfaces.Data.Examination;
+using Lea.Web.Commands.Core.Groups;
+using Lea.Web.Responses.Core.Groups;
 using MediatR;
 
-namespace Lea.Web.Handlers.Examination.PastExams;
+namespace Lea.Web.Handlers.Core.Groups;
 
 public class CreatePastExamHandler : IRequestHandler<CreatePastExamCommand, CreatePastExamResponse>
 {

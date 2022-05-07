@@ -35,8 +35,9 @@ public class LeaDbContextSeeder : ISeeder
         var seeders = new ISeeder[]
         {
             new RolesSeeder(dbContext, serviceProvider),
-            new UsersSeeder(dbContext, serviceProvider), 
-            
+            new UsersSeeder(dbContext, serviceProvider),
+
+
             new CoursesSeeder(dbContext, serviceProvider),
 
             new FoldersSeeder(dbContext, serviceProvider),
@@ -47,7 +48,6 @@ public class LeaDbContextSeeder : ISeeder
             new DirectMessagesSeeder(dbContext, serviceProvider),
             new EmojisSeeder(dbContext, serviceProvider),
             new PollsSeeder(dbContext, serviceProvider),
-
         };
 
         foreach (var seeder in seeders)

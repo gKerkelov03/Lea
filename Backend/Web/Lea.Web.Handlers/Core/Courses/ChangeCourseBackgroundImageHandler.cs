@@ -1,4 +1,4 @@
-﻿using Lea.Services.Data.Interfaces.Core;
+﻿using Lea.Services.Interfaces.Data.Core;
 using Lea.Web.Commands.Core.Courses;
 using Lea.Web.Responses.Core.Courses;
 using MediatR;

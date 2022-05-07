@@ -1,7 +1,7 @@
-﻿using Lea.Web.Responses.Messaging.ChannelMessages;
+﻿using Lea.Web.Responses.Messaging.Channels;
 using MediatR;
 
-namespace Lea.Web.Commands.Messaging.ChannelMessages;
+namespace Lea.Web.Commands.Messaging.Channels;
 
 public class SendChannelMessageCommand : IRequest<SendChannelMessageResponse>
 {

@@ -1,5 +1,4 @@
 ﻿using Lea.Web.Commands.Messaging.DirectMessages;
-using Lea.Web.Commands.Messaging.Emojis;
 using Lea.Web.Responses.Messaging.DirectMessages;
 
 namespace Lea.Web.Controllers.Messaging;

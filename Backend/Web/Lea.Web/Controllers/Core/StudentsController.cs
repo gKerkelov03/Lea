@@ -1,7 +1,5 @@
 ﻿using Lea.Web.Commands.Core.Students;
-using Lea.Web.Commands.Examination.PastExams;
 using Lea.Web.Responses.Core.Students;
-using Lea.Web.Responses.Examination.PastExams;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lea.Web.Controllers.Core;
@@ -26,6 +24,4 @@ public class StudentsController : ApiController
     //PastExams
     public async Task<ActionResult<GetAllPastExamsForAStudentResponse>> GetAllPastExams(GetAllPastExamsForAStudentCommand getAllPastExamsCommand)
         => await this.Mediator.Send(getAllPastExamsCommand);
-
-    
 }

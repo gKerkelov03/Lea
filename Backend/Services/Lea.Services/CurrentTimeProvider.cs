@@ -1,4 +1,4 @@
-﻿using Lea.Services.Interfaces;
+﻿using Lea.Services.Interfaces.Business;
 
 namespace Lea.Services;
 

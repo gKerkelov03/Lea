@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Lea.Data.Common;
-using Lea.Data.Repositories.Interfaces;
-using Lea.Services.Data.Interfaces;
+using Lea.Data.Interfaces;
+using Lea.Services.Interfaces.Data;
 using System.Linq.Expressions;
 
 namespace Lea.Services.Data;

@@ -10,6 +10,6 @@ public class Emoji : LeaEntity
 
     public virtual ICollection<ChannelMessage> ChannelMessagesMarkedWithIt { get; set; }
 
-    public virtual ICollection<ChannelMessage> DirectMessagesMarkedWithIt { get; set; }
+    public virtual ICollection<DirectMessage> DirectMessagesMarkedWithIt { get; set; }
 
 }

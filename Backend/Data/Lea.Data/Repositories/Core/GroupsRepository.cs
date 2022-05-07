@@ -1,5 +1,5 @@
 ﻿using Lea.Data.Entities.Core;
-using Lea.Data.Repositories.Interfaces.Core;
+using Lea.Data.Interfaces.Core;
 
 namespace Lea.Data.Repositories.Core;
 

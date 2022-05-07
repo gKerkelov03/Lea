@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Lea.Common\Lea.Common.csproj" />
+    <ProjectReference Include="..\Lea.Services.Interfaces\Lea.Services.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

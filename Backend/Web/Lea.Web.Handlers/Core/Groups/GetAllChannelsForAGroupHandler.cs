@@ -1,9 +1,9 @@
-﻿using Lea.Services.Data.Interfaces.Messaging;
-using Lea.Web.Commands.Messaging.Channels;
-using Lea.Web.Responses.Messaging.Channels;
+﻿using Lea.Services.Interfaces.Data.Messaging;
+using Lea.Web.Commands.Core.Groups;
+using Lea.Web.Responses.Core.Groups;
 using MediatR;
 
-namespace Lea.Web.Handlers.Messaging.Channels;
+namespace Lea.Web.Handlers.Core.Groups;
 
 public class GetAllChannelsForAGroupHandler : IRequestHandler<GetAllChannelsForAGroupCommand, GetAllChannelsForAGroupResponse>
 {

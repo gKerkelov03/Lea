@@ -1,5 +1,5 @@
 ﻿using Lea.Data.Entities.Examination;
-using Lea.Data.Repositories.Interfaces.Examination;
+using Lea.Data.Interfaces.Examination;
 
 namespace Lea.Data.Repositories.Examination;
 

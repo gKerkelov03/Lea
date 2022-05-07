@@ -1,9 +1,9 @@
-﻿using Lea.Services.Data.Interfaces.Examination;
-using Lea.Web.Commands.Examination.UpcomingExams;
-using Lea.Web.Responses.Examination.UpcomingExams;
+﻿using Lea.Services.Interfaces.Data.Examination;
+using Lea.Web.Commands.Core.Groups;
+using Lea.Web.Responses.Core.Groups;
 using MediatR;
 
-namespace Lea.Web.Handlers.Examination.UpcomingExams;
+namespace Lea.Web.Handlers.Core.Groups;
 
 public class CreateUpcomingExamHandler : IRequestHandler<CreateUpcomingExamCommand, CreateUpcomingExamResponse>
 {

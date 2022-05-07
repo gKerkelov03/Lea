@@ -1,7 +1,7 @@
-﻿using Lea.Web.Responses.Examination.PastExams;
+﻿using Lea.Web.Responses.Core.Groups;
 using MediatR;
 
-namespace Lea.Web.Commands.Examination.PastExams;
+namespace Lea.Web.Commands.Core.Groups;
 
 public class GetAllPastExamsForAGroupCommand : IRequest<GetAllPastExamsForAGroupResponse>
 {

@@ -1,5 +1,5 @@
 using Lea.Data;
-using Lea.Data.Seeding;
+using Lea.Data.Seeding.Seeders;
 using Lea.Web.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,7 +26,7 @@ var app = builder.Build();
 using var serviceScope = ((IApplicationBuilder)app).ApplicationServices.CreateScope();
 var dbContext = serviceScope.ServiceProvider.GetRequiredService<LeaDbContext>();
 
-if (!dbContext.Database.CanConnect())
+if (!dbContext.Database.GetPendingMigrations().Any())
 {
     dbContext.Database.Migrate();
     await new LeaDbContextSeeder(dbContext, serviceScope.ServiceProvider).SeedAsync();

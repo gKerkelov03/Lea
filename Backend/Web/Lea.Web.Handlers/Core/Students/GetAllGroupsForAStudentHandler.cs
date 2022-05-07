@@ -1,12 +1,7 @@
-﻿using Lea.Services.Data.Interfaces.Core;
+﻿using Lea.Services.Interfaces.Data.Core;
 using Lea.Web.Commands.Core.Students;
 using Lea.Web.Responses.Core.Students;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lea.Web.Handlers.Core.Students;
 public class GetAllGroupsForAStudentHandler : IRequestHandler<GetAllGroupsForAStudentCommand, GetAllGroupsForAStudentResponse>

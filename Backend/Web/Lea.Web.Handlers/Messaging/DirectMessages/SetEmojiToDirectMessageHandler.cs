@@ -1,9 +1,9 @@
-﻿using Lea.Services.Data.Interfaces.Messaging;
-using Lea.Web.Commands.Messaging.Emojis;
-using Lea.Web.Responses.Messaging.Emojis;
+﻿using Lea.Services.Interfaces.Data.Messaging;
+using Lea.Web.Commands.Messaging.DirectMessages;
+using Lea.Web.Responses.Messaging.DirectMessages;
 using MediatR;
 
-namespace Lea.Web.Handlers.Messaging.Emojis;
+namespace Lea.Web.Handlers.Messaging.DirectMessages;
 
 public class SetEmojiToDirectMessageHandler : IRequestHandler<SetEmojiToDirectMessageCommand, SetEmojiToDirectMessageResponse>
 {

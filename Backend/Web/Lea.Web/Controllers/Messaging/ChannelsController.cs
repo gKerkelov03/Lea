@@ -1,6 +1,4 @@
-﻿using Lea.Web.Commands.Messaging.ChannelMessages;
-using Lea.Web.Commands.Messaging.Channels;
-using Lea.Web.Responses.Messaging.ChannelMessages;
+﻿using Lea.Web.Commands.Messaging.Channels;
 using Lea.Web.Responses.Messaging.Channels;
 using Microsoft.AspNetCore.Mvc;
 

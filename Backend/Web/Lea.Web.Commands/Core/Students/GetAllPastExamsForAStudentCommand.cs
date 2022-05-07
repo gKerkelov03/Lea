@@ -1,6 +1,7 @@
-﻿using MediatR;
+﻿using Lea.Web.Responses.Core.Students;
+using MediatR;
 
-namespace Lea.Web.Controllers.Core;
+namespace Lea.Web.Commands.Core.Students;
 
 public class GetAllPastExamsForAStudentCommand : IRequest<GetAllPastExamsForAStudentResponse>
 {

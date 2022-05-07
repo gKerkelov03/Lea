@@ -1,15 +1,5 @@
 ﻿using Lea.Web.Commands.Core.Groups;
-using Lea.Web.Commands.Core.Lectors;
-using Lea.Web.Commands.Core.Students;
-using Lea.Web.Commands.Examination.PastExams;
-using Lea.Web.Commands.Examination.UpcomingExams;
-using Lea.Web.Commands.Messaging.Channels;
 using Lea.Web.Responses.Core.Groups;
-using Lea.Web.Responses.Core.Lectors;
-using Lea.Web.Responses.Core.Students;
-using Lea.Web.Responses.Examination.PastExams;
-using Lea.Web.Responses.Examination.UpcomingExams;
-using Lea.Web.Responses.Messaging.Channels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lea.Web.Controllers.Core;

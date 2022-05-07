@@ -1,7 +1,5 @@
 ﻿using Lea.Web.Commands.Core.Courses;
-using Lea.Web.Commands.Core.Groups;
 using Lea.Web.Responses.Core.Courses;
-using Lea.Web.Responses.Core.Groups;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lea.Web.Controllers.Core;
@@ -18,6 +16,8 @@ public class CoursesController : ApiController
     public async Task<ActionResult<DeleteCourseResponse>> DeleteCourse(DeleteCourseCommand deleteCourse)
         => await this.Mediator.Send(deleteCourse);
 
+    public async Task<ActionResult<AddAdminRoleResponse>> AddAdminRole(AddAdminRoleCommand addAdminRoleCommand)
+        => await this.Mediator.Send(addAdminRoleCommand);
 
     //Groups
     public async Task<ActionResult<CreateGroupResponse>> CreateGroup(CreateGroupCommand createGroupCommand)

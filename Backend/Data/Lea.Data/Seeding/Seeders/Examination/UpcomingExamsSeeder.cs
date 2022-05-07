@@ -4,7 +4,7 @@ namespace Lea.Data.Seeding.Seeders.Examination;
 
 public class UpcomingExamsSeeder : BaseSeeder<UpcomingExam>
 {
-    public UpcomingExamsSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext, serviceProvider)
+    public UpcomingExamsSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext)
     {
         dataToSeed = new UpcomingExam[]
         {

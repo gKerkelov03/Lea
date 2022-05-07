@@ -1,7 +1,6 @@
 ﻿using static Lea.Common.GlobalConstants;
 using Lea.Data.Entities.Core;
 using Lea.Data.Entities.Identity;
-using Lea.Data.Repositories.Core;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,57 +8,117 @@ namespace Lea.Data.Seeding.Seeders.Core;
 
 public class CoursesSeeder : BaseSeeder<Course>
 {
-    public CoursesSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext, serviceProvider)
+    public CoursesSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider) : base(dbContext)
     {
         var roleManager = serviceProvider.GetRequiredService<RoleManager<LeaRole>>();
         var userManager = serviceProvider.GetRequiredService<UserManager<LeaUser>>();
 
-        var cryptoCourse = dbContext.Courses.Where(course => course.Director.UserName == CryptoCourse_DirectorUserName).First();
-        var selfImprovementCourse = dbContext.Courses.Where(course => course.Director.UserName == SelfImprovementCourse_DirectorUserName).First();
-
-        var cryptoCourseDirector = dbContext.Users.Where(user => user.UserName == SelfImprovementCourse_DirectorUserName).First();
-        var selfImprovementCourseDirector = dbContext.Users.Where(user => user.UserName == SelfImprovementCourse_DirectorUserName).First();
-
-        var rolesForTheCryptoCourse = roleManager.Roles.Where(role => role.Course == cryptoCourse);
-        var rolesForTheSelfImprovementCourse = roleManager.Roles.Where(role => role.Course == cryptoCourse);
-
-        var cryptoCourseAdminRoles = rolesForTheCryptoCourse.Where(role => role.Name == Roles_AdminRoleName).ToList(); 
-        var selfImprovementCourseAdminRoles = rolesForTheSelfImprovementCourse.Where(role => role.Name == Roles_AdminRoleName).ToList();
-
-        var cryptoCourseAdminsIds = dbContext.UserRoles.Where(userRole => cryptoCourseAdminRoles.Any(role => role.Id == userRole.RoleId)).Select(userRole => userRole.UserId).ToList();
-        var selfImprovementCourseAdminsIds = dbContext.UserRoles.Where(userRole => selfImprovementCourseAdminRoles.Any(role => role.Id == userRole.RoleId)).Select(userRole => userRole.UserId).ToList();
-
-        var cryptoCourseAdmins = cryptoCourseAdminsIds.Select(id => userManager.FindByIdAsync(id.ToString()).GetAwaiter().GetResult()).ToList();
-        var selfImprovementCourseAdmins = selfImprovementCourseAdminsIds.Select(id => userManager.FindByIdAsync(id.ToString()).GetAwaiter().GetResult()).ToList();
-
-        var cryptoCourseGroups = dbContext.Groups.Where(group => group.Course == cryptoCourse).ToList();
-        var selfImprovementCourseGroups = dbContext.Groups.Where(group => group.Course == selfImprovementCourse).ToList();
-
         //TODO: Ask a question about this
         //Func<Guid, LeaUser> ab = async id => await userManager.FindByIdAsync(id.ToString());        
 
-        dataToSeed = new Course[]
+        #region Roles
+        var allRoles = dbContext.Roles.ToList().Chunk(4);
+        var cryptoCourseRoles = allRoles.First();
+        var selfImprovementCourseRoles = allRoles.Last();
+
+        var cryptoCourse_directorRole = cryptoCourseRoles[0];
+        var cryptoCourse_adminRole = cryptoCourseRoles[1];
+        var cryptoCourse_lectorRole = cryptoCourseRoles[2];
+        var cryptoCourse_studentRole = cryptoCourseRoles[3];
+
+        var selfImprovementCourse_directorRole = selfImprovementCourseRoles[0];
+        var selfImprovementCourse_adminRole = selfImprovementCourseRoles[1];
+        var selfImprovementCourse_lectorRole = selfImprovementCourseRoles[2];
+        var selfImprovementCourse_studentRole = selfImprovementCourseRoles[3];
+        #endregion
+        
+        #region Groups 
+        var cryptoCourse_stableCoinsGroup = new Group
         {
-            new Course
-            {
-                Title = CryptoCourse_DirectorUserName,
-                PictureUrl = "...",
-                Director = cryptoCourseDirector,
-                Admins = cryptoCourseAdmins,
-                Students = new List<Student>(),
-                Groups = cryptoCourseGroups,
-                Lectors = new List<Lector>(),
-            },
-            new Course
-            {
-                Title = SelfImprovementCourse_DirectorUserName,
-                PictureUrl = "...",
-                Director = selfImprovementCourseDirector,
-                Admins = selfImprovementCourseAdmins,
-                Students = new List<Student>(),
-                Groups = selfImprovementCourseGroups,
-                Lectors = new List<Lector>(),
-            },            
+            Name = cryptoCourse_stableCoinsGroupName,
+            PictureUrl = "...",
         };
+        var cryptoCourse_altcoinsGroup = new Group
+        {
+            Name = cryptoCourse_altcoinsGroupName,
+            PictureUrl = "...",
+        };
+        var cryptoCourse_foundamentalsGroup = new Group
+        {
+            Name = cryptoCourse_foundamentalsGroupName,
+            PictureUrl = "...",
+        };
+
+        var selfImprovementCourse_coldShowersGroup = new Group
+        {
+            Name = selfImprovementCourse_coldShowersGroupName,
+            PictureUrl = "...",
+        };
+        var selfImprovementCourse_fitnessGroup = new Group
+        {
+            Name = selfImprovementCourse_fitnessGroupName,
+            PictureUrl = "...",
+        };
+        var selfImprovementCourse_meditationGroup = new Group
+        {
+            Name = selfImprovementCourse_meditationGroupName,
+            PictureUrl = "...",
+        };
+        #endregion
+
+        LeaUser cryptoCourse_Director = dbContext.Users.Where(user => user.UserName == "cryptoCourseDirector").First();
+        LeaUser cryptoCourse_secondAdmin = dbContext.Users.Where(user => user.UserName == "cryptoCourse_secondAdmin").First();
+        LeaUser cryptoCourse_firstAdmin = dbContext.Users.Where(user => user.UserName == "cryptoCourse_firstAdmin").First();
+
+        #region Courses
+        var cryptoCourse = new Course
+        {
+            Name = "CryptoCourse_DirectorUserName",
+            PictureUrl = "...",
+            Director = cryptoCourse_Director,
+            Admins = new[] { cryptoCourse_firstAdmin, cryptoCourse_secondAdmin },
+            Groups = new[] { cryptoCourse_altcoinsGroup, cryptoCourse_foundamentalsGroup, cryptoCourse_stableCoinsGroup }
+        };
+        //var selfImprovementCourse = new Course
+        //{
+        //    Name = "SelfImprovementCourse_DirectorUserName",
+        //    PictureUrl = "...",
+        //    Director = selfImprovementCourse_Director,
+        //    Admins = new[] { selfImprovementCourse_firstAdmin, selfImprovementCourse_secondAdmin },
+        //    Groups = new[] { selfImprovementCourse_coldShowersGroup, selfImprovementCourse_fitnessGroup, selfImprovementCourse_meditationGroup }
+        //};
+        #endregion
+
+        #region Setting Role.Course to concrete Course
+        cryptoCourse_directorRole.Course = cryptoCourse;
+        cryptoCourse_lectorRole.Course = cryptoCourse;
+        cryptoCourse_adminRole.Course = cryptoCourse;
+        cryptoCourse_studentRole.Course = cryptoCourse;
+
+        //selfImprovementCourse_directorRole.Course = selfImprovementCourse;
+        //selfImprovementCourse_directorRole.Course = selfImprovementCourse;
+        //selfImprovementCourse_directorRole.Course = selfImprovementCourse;
+        //selfImprovementCourse_directorRole.Course = selfImprovementCourse;
+        #endregion
+
+        #region Setting Group.Course to concrete Course
+        //cryptoCourse_altcoinsGroup.Course = cryptoCourse;
+        //cryptoCourse_foundamentalsGroup.Course = cryptoCourse;
+        //cryptoCourse_stableCoinsGroup.Course = cryptoCourse;
+
+        //selfImprovementCourse_meditationGroup.Course = selfImprovementCourse;
+        //selfImprovementCourse_fitnessGroup.Course = selfImprovementCourse;
+        //selfImprovementCourse_coldShowersGroup.Course = selfImprovementCourse;
+        #endregion
+
+        #region Setting Group.Lector to concrete Lector
+        //cryptoCourse_altcoinsGroup.Lectors.Add(cryptoCourse_firstLector);
+        //cryptoCourse_foundamentalsGroup.Lectors.Add(cryptoCourse_secondLector);
+
+        //selfImprovementCourse_meditationGroup.Lectors.Add(selfImprovementCourse_firstLector);
+        //selfImprovementCourse_fitnessGroup.Lectors.Add(selfImprovementCourse_secondLector);
+        #endregion
+
+        dataToSeed = new[] { cryptoCourse };
     }
 }

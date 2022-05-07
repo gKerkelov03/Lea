@@ -3,15 +3,11 @@
 public class BaseSeeder<TEntity> : ISeeder where TEntity : class
 {
     private readonly LeaDbContext dbContext;
-    private readonly IServiceProvider serviceProvider;
 
     protected TEntity[] dataToSeed;
 
-    public BaseSeeder(LeaDbContext dbContext, IServiceProvider serviceProvider)
-    {
-        this.dbContext = dbContext;
-        this.serviceProvider = serviceProvider;        
-    }
+    public BaseSeeder(LeaDbContext dbContext) 
+        => this.dbContext = dbContext;
 
     public virtual async Task SeedAsync()
     {

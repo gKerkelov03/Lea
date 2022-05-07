@@ -1,4 +1,4 @@
-﻿namespace Lea.Web.Responses.Messaging.ChannelMessages;
+﻿namespace Lea.Web.Responses.Messaging.Channels;
 
 public class SendChannelMessageResponse
 {

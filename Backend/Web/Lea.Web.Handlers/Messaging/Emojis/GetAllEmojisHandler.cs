@@ -1,4 +1,4 @@
-﻿using Lea.Services.Data.Interfaces.Messaging;
+﻿using Lea.Services.Interfaces.Data.Messaging;
 using Lea.Web.Commands.Messaging.Emojis;
 using Lea.Web.Responses.Messaging.Emojis;
 using MediatR;

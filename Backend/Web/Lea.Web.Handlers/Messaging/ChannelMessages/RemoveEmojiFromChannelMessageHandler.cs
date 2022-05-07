@@ -1,11 +1,9 @@
-﻿using Lea.Services.Data.Interfaces.Messaging;
+﻿using Lea.Services.Interfaces.Data.Messaging;
 using Lea.Web.Commands.Messaging.ChannelMessages;
-using Lea.Web.Commands.Messaging.Channels;
 using Lea.Web.Responses.Messaging.ChannelMessages;
-using Lea.Web.Responses.Messaging.Channels;
 using MediatR;
 
-namespace Lea.Web.Handlers.Messaging.Channels;
+namespace Lea.Web.Handlers.Messaging.ChannelMessages;
 
 public class RemoveEmojiFromChannelMessageHandler : IRequestHandler<RemoveEmojiFromChannelMessageCommand, RemoveEmojiFromChannelMessageResponse>
 {

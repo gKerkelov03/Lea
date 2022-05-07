@@ -1,9 +1,5 @@
-﻿using Lea.Web.Commands.Core.Groups;
-using Lea.Web.Commands.Core.Lectors;
-using Lea.Web.Commands.Examination.Folders;
-using Lea.Web.Responses.Core.Groups;
+﻿using Lea.Web.Commands.Core.Lectors;
 using Lea.Web.Responses.Core.Lectors;
-using Lea.Web.Responses.Examination.Folders;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lea.Web.Controllers.Core;
@@ -26,6 +22,7 @@ public class LectorsController : ApiController
     //Folders
     public async Task<ActionResult<CreateFolderResponse>> CreateFolder(CreateFolderCommand createFolderCommand)
         => await this.Mediator.Send(createFolderCommand);
+
     public async Task<GetRootFolderResponse> GetRootFolder(GetRootFolderCommand getRootFolderCommand)
         => await this.Mediator.Send(getRootFolderCommand);
 }

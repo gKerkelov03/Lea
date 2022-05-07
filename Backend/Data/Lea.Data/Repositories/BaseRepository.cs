@@ -1,5 +1,5 @@
 ﻿using Lea.Data.Common;
-using Lea.Data.Repositories.Interfaces;
+using Lea.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

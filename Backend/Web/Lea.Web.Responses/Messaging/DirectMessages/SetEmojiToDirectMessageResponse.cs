@@ -1,4 +1,4 @@
-﻿namespace Lea.Web.Controllers.Messaging;
+﻿namespace Lea.Web.Responses.Messaging.DirectMessages;
 
 public class SetEmojiToDirectMessageResponse
 {

@@ -1,16 +1,11 @@
-﻿using Lea.Web.Commands.Examination.ExamQuestionAnswerOptions;
-using Lea.Web.Commands.Examination.ExamQuestions;
-using Lea.Web.Responses.Examination.ExamQuestionAnswerOptions;
+﻿using Lea.Web.Commands.Examination.ExamQuestions;
 using Lea.Web.Responses.Examination.ExamQuestions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lea.Web.Controllers.Examination;
 
 public class ExamQuestionsController : ApiController
-{
-    public async Task<ActionResult<CreateExamQuestionResponse>> CreateExamQuestion(CreateExamQuestionCommand createExamQuestionCommand)
-        => await this.Mediator.Send(createExamQuestionCommand);
-
+{    
     public async Task<ActionResult<GetExamQuestionResponse>> GetExamQuestion(GetExamQuestionCommand getExamQuestionCommand)
         => await this.Mediator.Send(getExamQuestionCommand);
     

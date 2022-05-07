@@ -15,6 +15,16 @@ public class Group : LeaEntity
 
     public virtual ICollection<Student> Students { get; set; }
 
-    public virtual ICollection<UpcomingExam> UpcomingTests { get; set; }
 
+
+
+
+
+
+
+
+
+    public virtual ICollection<UpcomingExam> UpcomingExams { get; set; }
+
+    public virtual ICollection<PastExam> PastExams { get; set; }
 }

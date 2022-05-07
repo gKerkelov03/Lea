@@ -1,4 +1,4 @@
-﻿namespace Lea.Web.Controllers.Core;
+﻿namespace Lea.Web.Responses.Core.Students;
 
 public class GetAllPastExamsForAStudentResponse
 {

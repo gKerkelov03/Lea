@@ -1,6 +1,6 @@
-﻿using Lea.Services.Data.Interfaces.Core;
-using Lea.Web.Commands.Core.Groups;
-using Lea.Web.Responses.Core.Groups;
+﻿using Lea.Services.Interfaces.Data.Core;
+using Lea.Web.Commands.Core.Courses;
+using Lea.Web.Responses.Core.Courses;
 using MediatR;
 
 namespace Lea.Web.Handlers.Core.Courses;

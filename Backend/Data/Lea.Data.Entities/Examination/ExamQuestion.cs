@@ -10,5 +10,5 @@ public class ExamQuestion : LeaEntity
 
     public virtual ICollection<ExamQuestionAnswerOption> Options { get; set; }
 
-    public virtual ExamQuestionAnswerOption CorrectAnswer { get; set; }
+    //public virtual ExamQuestionAnswerOption CorrectAnswer { get; set; }
 }

@@ -1,6 +1,7 @@
-﻿using MediatR;
+﻿using Lea.Web.Responses.Messaging.DirectMessages;
+using MediatR;
 
-namespace Lea.Web.Controllers.Messaging;
+namespace Lea.Web.Commands.Messaging.DirectMessages;
 
 public class RemoveEmojiFromDirectMessageCommand : IRequest<RemoveEmojiFromDirectMessageResponse>
 {

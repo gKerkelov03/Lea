@@ -1,4 +1,4 @@
-﻿namespace Lea.Web.Responses.Examination.UpcomingExams;
+﻿namespace Lea.Web.Responses.Core.Groups;
 
 public class CreateUpcomingExamResponse
 {

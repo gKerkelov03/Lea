@@ -1,4 +1,4 @@
-﻿using Lea.Services.Data.Interfaces.Messaging;
+﻿using Lea.Services.Interfaces.Data.Messaging;
 using Lea.Web.Commands.Messaging.Polls;
 using Lea.Web.Responses.Messaging.Polls;
 using MediatR;

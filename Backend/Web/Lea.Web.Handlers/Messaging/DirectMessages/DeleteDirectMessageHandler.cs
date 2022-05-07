@@ -1,4 +1,4 @@
-﻿using Lea.Services.Data.Interfaces.Messaging;
+﻿using Lea.Services.Interfaces.Data.Messaging;
 using Lea.Web.Commands.Messaging.DirectMessages;
 using Lea.Web.Responses.Messaging.DirectMessages;
 using MediatR;

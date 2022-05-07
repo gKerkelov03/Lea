@@ -1,4 +1,4 @@
-﻿using Lea.Services.Data.Interfaces.Examination;
+﻿using Lea.Services.Interfaces.Data.Examination;
 using Lea.Web.Commands.Examination.ExamQuestionAnswerOptions;
 using Lea.Web.Responses.Examination.ExamQuestionAnswerOptions;
 using MediatR;

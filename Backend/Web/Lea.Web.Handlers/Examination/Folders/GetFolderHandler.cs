@@ -1,4 +1,4 @@
-﻿using Lea.Services.Data.Interfaces.Examination;
+﻿using Lea.Services.Interfaces.Data.Examination;
 using Lea.Web.Commands.Examination.Folders;
 using Lea.Web.Responses.Examination.Folders;
 using MediatR;

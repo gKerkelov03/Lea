@@ -8,9 +8,24 @@ public class Student : LeaEntity
 {
     public string Name { get; set; }
 
-    public virtual Course School { get; set; }   
+    public virtual LeaUser User { get; set; }
+
+    public virtual ICollection<Group> Groups { get; set; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public virtual ICollection<PastExam> PastTests { get; set; }
 
-    public virtual ICollection<Group> Groups { get; set; }
 }

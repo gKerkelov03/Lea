@@ -1,7 +1,7 @@
-﻿using Lea.Web.Responses.Examination.UpcomingExams;
+﻿using Lea.Web.Responses.Core.Groups;
 using MediatR;
 
-namespace Lea.Web.Commands.Examination.UpcomingExams;
+namespace Lea.Web.Commands.Core.Groups;
 
 public class CreateUpcomingExamCommand : IRequest<CreateUpcomingExamResponse>
 {

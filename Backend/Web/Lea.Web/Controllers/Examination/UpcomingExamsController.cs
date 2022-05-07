@@ -5,9 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Lea.Web.Controllers.Examination;
 
 public class UpcomingExamsController : ApiController
-{
-    
-
+{    
     public async Task<ActionResult<GetUpcomingExamResponse>> GetUpcomingExam(GetUpcomingExamCommand getUpcomingExamCommand)
    => await this.Mediator.Send(getUpcomingExamCommand);
         

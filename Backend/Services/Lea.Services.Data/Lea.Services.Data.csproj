@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Data\Lea.Data.Interfaces\Lea.Data.Interfaces.csproj" />
     <ProjectReference Include="..\..\Data\Lea.Data\Lea.Data.csproj" />
+    <ProjectReference Include="..\Lea.Services.Interfaces\Lea.Services.Interfaces.csproj" />
     <ProjectReference Include="..\Lea.Services.Models\Lea.Services.Data.Models.csproj" />
   </ItemGroup>
 

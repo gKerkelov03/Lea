@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Lea.Common\Lea.Common.csproj" />
+    <ProjectReference Include="..\..\Data\Lea.Data.Common\Lea.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\Lea.Data.Entities\Lea.Data.Entities.csproj" />
+    <ProjectReference Include="..\Lea.Services.Models\Lea.Services.Data.Models.csproj" />
+  </ItemGroup>
+
+</Project>

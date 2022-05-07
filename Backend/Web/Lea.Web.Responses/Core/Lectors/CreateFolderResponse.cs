@@ -1,4 +1,4 @@
-﻿namespace Lea.Web.Responses.Examination.Folders;
+﻿namespace Lea.Web.Responses.Core.Lectors;
 
 public class CreateFolderResponse
 {

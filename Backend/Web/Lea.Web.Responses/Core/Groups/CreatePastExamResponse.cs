@@ -1,4 +1,4 @@
-﻿namespace Lea.Web.Responses.Examination.PastExams;
+﻿namespace Lea.Web.Responses.Core.Groups;
 
 public class CreatePastExamResponse
 {
